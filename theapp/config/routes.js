@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 
-
 // Require controllers.
 var usersController = require('../controllers/users_controller');
 var productsController = require('../controllers/products_controller');
@@ -28,10 +27,5 @@ router.delete('/products/:id', productsController.destroy);
 
 router.put('/retailers', retailersController.create);
 router.delete('/retailers', retailersController.destroy);
-
-
-
-
-
 
 module.exports = router;
