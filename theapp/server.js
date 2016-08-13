@@ -11,12 +11,14 @@ var passport = require('passport');
 var env = require('./config/environment');
 var mongoose = require('./config/database');
 var routes = require('./config/routes');
-
+var PORT = process.env.PORT || 3000;
+var expressLayouts = require("express-ejs-layouts");
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -38,5 +40,9 @@ function debugReq(req, res, next) {
   debug('body:',   req.body);
   next();
 }
+
+app.listen(PORT, function(){
+  console.log('Listening on PORT 3000');
+})
 
 module.exports = app;

@@ -1,7 +1,7 @@
 var User = require("../models/user");
 
 function home (req, res, next) {
-
+  res.render('index.ejs', { title: 'Le Closet' });
 }
 
 function show (req, res, next) {

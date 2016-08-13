@@ -2,8 +2,8 @@ var mongoose = require('mongoose'),
     debug    = require('debug')('app:models');
 
 var userSchema = new mongoose.Schema({
-  first name: String,
-  last name: String,
+  f_name: String,
+  l_name: String,
   email: String,
   password: String,
   gender: String,
