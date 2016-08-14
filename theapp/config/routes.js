@@ -11,6 +11,28 @@ var retailersController = require('../controllers/retailers_controller');
 
 /* GET users listing. */
 router.get('/', usersController.home);
+
+// google oauth login route
+router.get('/auth/google', passport.authenticate(
+  'google',
+  { scope: ['profile', 'email'] }
+));
+
+// google oauth callback route
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+    successRedirect : '/',
+    failureRedirect : '/'
+  }
+));
+
+// OAuth logout route
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 // eventually needs authController.verify
 router.get('/users/:id', usersController.show);
 // eventually needs authController.verify
