@@ -11,12 +11,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 header {
-  background: url('../images/header.jpg') no-repeat top center fixed;
   margin-top: 100px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#headerOne {
+    background: url('../images/header.jpg') no-repeat top center fixed;
+    margin-top: 100px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 h1 {
  font-size: 5em;

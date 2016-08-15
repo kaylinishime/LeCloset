@@ -1,5 +1,6 @@
 var User = require("../models/user");
 
+
 function home (req, res, next) {
   res.render('index', { user: req.user });
 }
