@@ -1,18 +1,25 @@
 console.log("Main js loaded");
 
-$(function() {
-    var win;
-    var checkConnect;
-    var $connect = $("#login");
-    var oAuthURL = '/auth/google';
-
-    $connect.click(function() {
-        win = window.open(oAuthURL, 'SomeAuthentication', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400');
-    });
-
+var $connect = $("#login");
+var googleWindow;
+// $(function() {
+//     var win;
+//     var checkConnect;
+//     var oAuthURL = '/auth/google';
+//
+//     $connect.click(function() {
+//         win = window.open(oAuthURL, 'SomeAuthentication', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400');
+//     });
+//
+// });
     checkConnect = setInterval(function() {
-        if (!win || !win.closed) return;
+        if (googleWindow && googleWindow.location.pathname === "/close") {
         clearInterval(checkConnect);
-        window.location.reload();
+        googleWindow.close();
+      };
     }, 100);
-});
+
+$connect.on("click", function (){
+  googleWindow = window.open('/auth/google', 'googleWindow', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400');
+  // loop interval, keep checking if googleWindwo
+})
