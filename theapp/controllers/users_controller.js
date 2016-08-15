@@ -5,7 +5,7 @@ function home (req, res, next) {
 }
 
 function show (req, res, next) {
-
+res.render('profiles', { user: req.user });
 }
 
 function edit (req, res, next) {
