@@ -77,6 +77,14 @@ section {
   margin: 10px;
   margin-left: 45px;
 }
+
+#logo_modal {
+  width:250px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
 .comment_link {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
@@ -163,11 +171,6 @@ section {
  background-color: white;
  color: #606060;
 }
-.nav_right {
- float: right;
- margin-top: 35px;
- margin-right: 55px;
-}
 
 .nav_left {
  float: left;
@@ -190,7 +193,25 @@ section {
  z-index: 1;
 }
 
+.nav_container_1 {
+  display: inline-block;
+  margin-top: 38px;
+  float: right;
+}
 
+.nav_container_2 {
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 40px;
+  float: right;
+}
+.google {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  margin-top: 28px;
+  display: block;
+}
 
 #about, #contact {
  background-color: #eee;

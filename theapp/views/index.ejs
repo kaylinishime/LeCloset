@@ -5,24 +5,71 @@
     <a href="/"><img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" /></a>
   </div>
 
-  <div class="nav_right">
-    <ul class="">
-      <li><a href="#about">About</a></li>
-      <li><a href="#le_closet">Le Closet</a></li>
-      <li><a href="#contact">Contact</a></li>
-
+  <div>
       <% if (user) { %>
       <li><a href="/users/:id">My Closet</a></li>
+
       <li><span> or </span></li>
+
       <li><a href="/logout">Logout</a></li>
 
+
+
+
       <% } else { %>
-      <li><a href="#" id="login" >Log In</a></li>
-      <li><span> or </span></li>
-      <li><a href="#">Register</a></li>
+        <!-- Login -->
+      <div class="nav_container_2">
+        <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+          <button type="button">Login</button>
+          <div class="morph-content">
+            <div>
+              <div class="content-style-form content-style-form-1">
+                <p class="icon icon-close">X</p>
+                <img id="logo_modal" src="../images/le_closet_logo.png" alt="company logo" />
+                <h4 class="center_me">Welcome Home</h4>
+                <a href="#" id="login" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <strong class="joiner">or</strong>
+
+        <!-- Register -->
+        <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+          <button type="button">Register</button>
+
+          <div class="morph-content">
+            <div>
+              <div class="content-style-form content-style-form-2">
+                <p class="icon icon-close">X</p>
+
+                <h2>Register</h2>
+
+                <form>
+                  <p><label>Email</label><input type="text" /></p>
+                  <p><label>Password</label><input type="password" /></p>
+                  <p><label>Repeat Password</label><input type="password" /></p>
+                  <p><button>Sign Up</button></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <% } %>
 
-    </ul>
+      <div class="nav_container_1">
+        <ul class="">
+          <li><a href="#about">About</a></li>
+          <li><a href="#le_closet">Le Closet</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
   </div>
 </nav>
 
@@ -31,6 +78,8 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
+
+
 <header>
   <div class="container">
     <h5 class="hero_subheading">Retail therapy stored in one place</h5>
