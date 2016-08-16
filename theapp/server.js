@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
 var debug = require('debug')('app:http');
+var _ = require('underscore');
 
 
 

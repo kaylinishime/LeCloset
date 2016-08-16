@@ -86,13 +86,19 @@ section {
   margin: 10px;
   margin-left: 45px;
 }
-
-#logo_modal {
+.user_greeting {
+  display: inline;
+  margin-left: 28px;
+  font-size: 1em;
+  font-weight: 400;
+}
+.logo_modal {
   width:250px;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 25px;
+  clear: both;
 }
 .comment_link {
   font-family: 'Raleway', sans-serif;

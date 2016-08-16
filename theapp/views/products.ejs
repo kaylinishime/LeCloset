@@ -1,234 +1,152 @@
+<!-- PRODUCTS PAGE -->
 
-<nav class="nav_bar">
-  <div class="nav_left">
-    <!-- Logo image -->
-    <a href="/"><img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" /></a>
-  </div>
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+HEADER
+|||||||||||||||||||||||||||||||||||||||||
+-->
 
-  <div class="nav_right">
-    <ul class="">
-      <% if (user) { %>
-      <li><a href="/users/:id">My Closet</a></li>
-      <li><a href="/products">Search</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><span> or </span></li>
-      <li><a href="/logout">Logout</a></li>
-
-      <% } else { %>
-      <li><a href="/auth/google" onclick="window.open('/auth/google', 'newwindow', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400'); return false;">Log In</a></li>
-      <li><span> or </span></li>
-      <li><a href="#">Register</a></li>
-      <% } %>
-    </ul>
-  </div>
-</nav>
+<% include ../views/partials/nav.ejs %>
 
 <header>
-
-
-
-
 
 		<div class="box">
 			<ul id="ldd_menu" class="ldd_menu">
 				<li>
-					<span>Vacations</span><!-- Increases to 510px in width-->
+					<span>Search Retailers</span>
 					<div class="ldd_submenu">
-						<ul>
-							<li class="ldd_heading">By Location</li>
-							<li><a href="#">South America</a></li>
-							<li><a href="#">Antartica</a></li>
-							<li><a href="#">Africa</a></li>
-							<li><a href="#">Asia and Australia</a></li>
-							<li><a href="#">Europe</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Category</li>
-							<li><a href="#">Sun &amp; Beach</a></li>
-							<li><a href="#">Adventure</a></li>
-							<li><a href="#">Science &amp; Education</a></li>
-							<li><a href="#">Extreme Sports</a></li>
-							<li><a href="#">Relaxing</a></li>
-							<li><a href="#">Spa and Wellness</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Theme</li>
-							<li><a href="#">Paradise Islands</a></li>
-							<li><a href="#">Cruises &amp; Boat Trips</a></li>
-							<li><a href="#">Wild Animals &amp; Safaris</a></li>
-							<li><a href="#">Nature Pure</a></li>
-							<li><a href="#">Helping others &amp; For Hope</a></li>
-							<li><a href="#">Diving</a></li>
+
+						<ul id = "limheight">
+                <% retailers.forEach(function(retailer) { %>
+                <div class="row">
+                <div class="col-md-4">
+                <li class="retailers>">
+                  <label><input type="checkbox" onclick="OnChangeCheckbox(this)" id="cbox1" value="first_checkbox">
+                  <a href="#"><%= retailer.name %></a>
+                </label>
+              </li>
+
+              </div>
+            </div>
+        <% }) %>
 						</ul>
 						<a class="ldd_subfoot" href="#"> + New Deals</a>
 					</div>
 				</li>
-				<li>
-					<span>Equipment</span>
-					<div class="ldd_submenu">
-						<ul>
-							<li class="ldd_heading">By Location</li>
-							<li><a href="#">South America</a></li>
-							<li><a href="#">Antartica</a></li>
-							<li><a href="#">Africa</a></li>
-							<li><a href="#">Asia and Australia</a></li>
-							<li><a href="#">Europe</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Category</li>
-							<li><a href="#">Sun &amp; Beach</a></li>
-							<li><a href="#">Adventure</a></li>
-							<li><a href="#">Science &amp; Education</a></li>
-							<li><a href="#">Extreme Sports</a></li>
-							<li><a href="#">Relaxing</a></li>
-							<li><a href="#">Spa and Wellness</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Theme</li>
-							<li><a href="#">Paradise Islands</a></li>
-							<li><a href="#">Cruises &amp; Boat Trips</a></li>
-							<li><a href="#">Wild Animals &amp; Safaris</a></li>
-							<li><a href="#">Nature Pure</a></li>
-							<li><a href="#">Helping others &amp; For Hope</a></li>
-							<li><a href="#">Diving</a></li>
-						</ul>
-						<a class="ldd_subfoot" href="#"> + New Deals</a>
-					</div>
-				</li>
-				<li>
-					<span>Locations</span>
-					<div class="ldd_submenu">
-						<ul>
-							<li class="ldd_heading">By Location</li>
-							<li><a href="#">South America</a></li>
-							<li><a href="#">Antartica</a></li>
-							<li><a href="#">Africa</a></li>
-							<li><a href="#">Asia and Australia</a></li>
-							<li><a href="#">Europe</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Category</li>
-							<li><a href="#">Sun &amp; Beach</a></li>
-							<li><a href="#">Adventure</a></li>
-							<li><a href="#">Science &amp; Education</a></li>
-							<li><a href="#">Extreme Sports</a></li>
-							<li><a href="#">Relaxing</a></li>
-							<li><a href="#">Spa and Wellness</a></li>
-						</ul>
-						<ul>
-							<li class="ldd_heading">By Theme</li>
-							<li><a href="#">Paradise Islands</a></li>
-							<li><a href="#">Cruises &amp; Boat Trips</a></li>
-							<li><a href="#">Wild Animals &amp; Safaris</a></li>
-							<li><a href="#">Nature Pure</a></li>
-							<li><a href="#">Helping others &amp; For Hope</a></li>
-							<li><a href="#">Diving</a></li>
-						</ul>
-						<a class="ldd_subfoot" href="#"> + New Deals</a>
-					</div>
-				</li>
+
 			</ul>
 		</div>
 </header>
 
+<div class="row">
+    <div class="col-md-10">
+        <div class="view">
+            <section class="grid">
+                <div id="images">
+                    <div class="grid__item shirts">
+                        <div class="slider">
+                            <div class="slider__item">
+                                <!-- APPEND OBJECT HERE -->
+                                <img src="../images/dress.png">
+                            </div>
+                        </div>
+                        <div class="meta">
+                            <h3 class="meta__title">Miriam Classic</h3>
+                            <span class="meta__brand">Miriam</span>
+                            <span class="meta__price">$79</span>
+                        </div>
+                        <button class="action action--button action--buy">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="text-hidden">Add to cart</span>
+                        </button>
+                    </div>
 
-  <div class="view">
-      <section class="grid">
-          <div id="images">
-      <div class="grid__item shirts">
-          <div class="slider">
-              <div class="slider__item">
-                  <!-- APPEND OBJECT HERE -->
-                   <img src="../images/dress.png">
-              </div>
-          </div>
-          <div class="meta">
-              <h3 class="meta__title">Miriam Classic</h3>
-              <span class="meta__brand">Miriam</span>
-              <span class="meta__price">$79</span>
-          </div>
-          <button class="action action--button action--buy">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="text-hidden">Add to cart</span>
-          </button>
-              </div>
+                    <div id="images">
+                        <div class="grid__item shirts">
+                            <div class="slider">
+                                <div class="slider__item">
+                                    <!-- APPEND OBJECT HERE -->
+                                    <img src="../images/dress.png">
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <h3 class="meta__title">Miriam Classic</h3>
+                                <span class="meta__brand">Miriam</span>
+                                <span class="meta__price">$79</span>
+                            </div>
+                            <button class="action action--button action--buy">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="text-hidden">Add to cart</span>
+                            </button>
+                        </div>
 
-              <div id="images">
-          <div class="grid__item shirts">
-              <div class="slider">
-                  <div class="slider__item">
-                      <!-- APPEND OBJECT HERE -->
-                       <img src="../images/dress.png">
-                  </div>
-              </div>
-              <div class="meta">
-                  <h3 class="meta__title">Miriam Classic</h3>
-                  <span class="meta__brand">Miriam</span>
-                  <span class="meta__price">$79</span>
-              </div>
-              <button class="action action--button action--buy">
-                  <i class="fa fa-shopping-cart"></i>
-                  <span class="text-hidden">Add to cart</span>
-              </button>
-                  </div>
+                        <div id="images">
+                            <div class="grid__item shirts">
+                                <div class="slider">
+                                    <div class="slider__item">
+                                        <!-- APPEND OBJECT HERE -->
+                                        <img src="../images/dress.png">
+                                    </div>
+                                </div>
+                                <div class="meta">
+                                    <h3 class="meta__title">Miriam Classic</h3>
+                                    <span class="meta__brand">Miriam</span>
+                                    <span class="meta__price">$79</span>
+                                </div>
+                                <button class="action action--button action--buy">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="text-hidden">Add to cart</span>
+                                </button>
+                            </div>
 
-                  <div id="images">
-              <div class="grid__item shirts">
-                  <div class="slider">
-                      <div class="slider__item">
-                          <!-- APPEND OBJECT HERE -->
-                           <img src="../images/dress.png">
-                      </div>
-                  </div>
-                  <div class="meta">
-                      <h3 class="meta__title">Miriam Classic</h3>
-                      <span class="meta__brand">Miriam</span>
-                      <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span class="text-hidden">Add to cart</span>
-                  </button>
-                      </div>
+                            <div id="images">
+                                <div class="grid__item shirts">
+                                    <div class="slider">
+                                        <div class="slider__item">
+                                            <!-- APPEND OBJECT HERE -->
+                                            <img src="../images/dress.png">
+                                        </div>
+                                    </div>
+                                    <div class="meta">
+                                        <h3 class="meta__title">Miriam Classic</h3>
+                                        <span class="meta__brand">Miriam</span>
+                                        <span class="meta__price">$79</span>
+                                    </div>
+                                    <button class="action action--button action--buy">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="text-hidden">Add to cart</span>
+                                    </button>
+                                </div>
 
-                      <div id="images">
-                  <div class="grid__item shirts">
-                      <div class="slider">
-                          <div class="slider__item">
-                              <!-- APPEND OBJECT HERE -->
-                               <img src="../images/dress.png">
-                          </div>
-                      </div>
-                      <div class="meta">
-                          <h3 class="meta__title">Miriam Classic</h3>
-                          <span class="meta__brand">Miriam</span>
-                          <span class="meta__price">$79</span>
-                      </div>
-                      <button class="action action--button action--buy">
-                          <i class="fa fa-shopping-cart"></i>
-                          <span class="text-hidden">Add to cart</span>
-                      </button>
-                          </div>
+                                <div id="images">
+                                    <div class="grid__item shirts">
+                                        <div class="slider">
+                                            <div class="slider__item">
+                                                <!-- APPEND OBJECT HERE -->
+                                                <img src="../images/dress.png">
+                                            </div>
+                                        </div>
+                                        <div class="meta">
+                                            <h3 class="meta__title">Miriam Classic</h3>
+                                            <span class="meta__brand">Miriam</span>
+                                            <span class="meta__price">$79</span>
+                                        </div>
+                                        <button class="action action--button action--buy">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="text-hidden">Add to cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                          <div id="images">
-                      <div class="grid__item shirts">
-                          <div class="slider">
-                              <div class="slider__item">
-                                  <!-- APPEND OBJECT HERE -->
-                                   <img src="../images/dress.png">
-                              </div>
-                          </div>
-                          <div class="meta">
-                              <h3 class="meta__title">Miriam Classic</h3>
-                              <span class="meta__brand">Miriam</span>
-                              <span class="meta__price">$79</span>
-                          </div>
-                          <button class="action action--button action--buy">
-                              <i class="fa fa-shopping-cart"></i>
-                              <span class="text-hidden">Add to cart</span>
-                          </button>
-                              </div>
-      </section>
+            </section>
+            </div>
+            </div>
+        </div>
     </div>
+<div class="col-md-2">
 
-    </div>
+</div>
+
+</div>
