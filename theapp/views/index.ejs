@@ -7,32 +7,39 @@
 
   <div>
       <% if (user) { %>
-      <li><a href="/users/:id">My Closet</a></li>
+        <!-- My Closet -->
+        <div class="nav_container_2">
+          <div id="my_closet" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+            <button type="button">My Closet</button>
 
-      <li><span> or </span></li>
+          </div>
 
-      <li><a href="/logout">Logout</a></li>
+          <strong class="joiner">or</strong>
 
+          <!-- LogOut -->
+          <div id="log_out" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+            <button type="button">Log Out</button>
 
-
+          </div>
+        </div>
 
       <% } else { %>
         <!-- Login -->
       <div class="nav_container_2">
-        <div id="modal_login" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+        <div id="modal_login1" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
           <button type="button">Login</button>
           <div class="morph-content">
             <div>
               <div class="content-style-form content-style-form-1">
-                <p class="icon icon-close">X</p>
-                <img id="logo_modal" src="../images/le_closet_logo.png" alt="company logo" />
+                <span class="icon icon-close x">X</span>
+                <img class="logo_modal" src="../images/le_closet_logo.png" alt="company logo" />
                 <h4 class="center_me modal_header">Welcome Home</h4>
 
                 <a href="#" id="login" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
 
                 <form class="login_form_hidden">
-                  <p><label>Gender</label><input id="user_gender" type="text" /></p>
-                  <p><button id="lets_do_this">Lets Do This</button></p>
+                  <p><label>Gender</label><input id="user_gender1" type="text" /></p>
+                  <p><button id="lets_do_this1">Lets Do This</button></p>
                 </form>
 
               </div>
@@ -43,28 +50,27 @@
         <strong class="joiner">or</strong>
 
         <!-- Register -->
-        <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+        <div id="modal_login2" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
           <button type="button">Register</button>
-
           <div class="morph-content">
             <div>
-              <div class="content-style-form content-style-form-2">
-                <p class="icon icon-close">X</p>
+              <div class="content-style-form content-style-form-1">
+                <span class="icon icon-close x">X</span>
+                <img class="logo_modal" src="../images/le_closet_logo.png" alt="company logo" />
+                <h4 class="center_me modal_header">Join Le Community</h4>
 
-                <h2>Register</h2>
+                <a href="#" id="register" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
 
-                <form>
-                  <p><label>Email</label><input type="text" /></p>
-                  <p><label>Password</label><input type="password" /></p>
-                  <p><label>Repeat Password</label><input type="password" /></p>
-                  <p><button>Sign Up</button></p>
+                <form class="login_form_hidden">
+                  <p><label>Gender</label><input id="user_gender2" type="text" /></p>
+                  <p><button id="lets_do_this2">Lets Do This</button></p>
                 </form>
 
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
 
       <% } %>

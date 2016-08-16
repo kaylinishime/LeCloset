@@ -1,5 +1,4 @@
 /* Morph Button: Default Styles */
-
 .morph-button {
 	position: relative;
 	display: block;
@@ -215,7 +214,7 @@
 .morph-button-modal-3.open .morph-content {
 	margin: -255px 0 0 -210px;
 	width: 420px;
-	height: auto;
+	height: 475px;
 }
 
 .morph-button-modal-3.open .morph-content > div {

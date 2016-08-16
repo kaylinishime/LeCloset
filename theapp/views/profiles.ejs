@@ -1,44 +1,12 @@
-
-
-
-
+<!-- PROFILE PAGE -->
 
 <!--
 |||||||||||||||||||||||||||||||||||||||||
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-<!-- HOME PAGE -->
-<nav class="nav_bar">
-  <div class="nav_left">
-    <!-- Logo image -->
-    <a href="/"><img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" /></a>
-  </div>
 
-  <div class="nav_right">
-    <ul class="">
-      <% if (user) { %>
-      <li><a href="/users/:id">My Closet</a></li>
-      <li><a href="/products">Search</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><span> or </span></li>
-      <li><a href="/logout">Logout</a></li>
-
-      <% } else { %>
-      <li><a href="/auth/google" onclick="window.open('/auth/google', 'newwindow', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400'); return false;">Log In</a></li>
-      <li><span> or </span></li>
-      <li><a href="#">Register</a></li>
-      <% } %>
-
-    </ul>
-  </div>
-</nav>
-
-<!--
-|||||||||||||||||||||||||||||||||||||||||
-HEADER
-|||||||||||||||||||||||||||||||||||||||||
--->
+<% include ../views/partials/nav.ejs %>
 
 <!--
 |||||||||||||||||||||||||||||||||||||||||
