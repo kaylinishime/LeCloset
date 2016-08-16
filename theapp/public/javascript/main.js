@@ -47,9 +47,29 @@ $('.google').on('click', function() {
 
 // Redirects LOGIN user to their Product Search page.
 $('#lets_do_this1').on('click', function() {
-  var $gender = $('#user_gender1').val()
-  if ($gender.length >= 4) {
-    //persist to database
+  var $gender1 = $('#user_gender1').val()
+  if ($gender1.length >= 4) {
+    // sending the data to controller to persist to DB
+    $.ajax({
+      url: '/users/:id',
+      type: "put",
+      dataType: "json",
+      data: {
+        gender: $gender1,
+      }
+    })
+      // .then(function(data) {
+      //   if (data.error) {
+      //     $("#errors").html(`Error: ${data.error}`);
+      //   }
+      //   else {
+      //     $("#errors").html('');
+      //     $("#additional-information").hide();
+      //     $("#update-button").show();
+      //     if (data.shelter) $("#shelter-button").show();
+      //     else $("#shelter-button").hide();
+      //   }
+      // })
     console.log('it works');
     window.location.href="/products/:id"
   }
@@ -61,9 +81,29 @@ $('#lets_do_this1').on('click', function() {
 
 // Redirects REGISTER user to their Product Search page.
 $('#lets_do_this2').on('click', function() {
-  var $gender = $('#user_gender2').val()
-  if ($gender.length >= 4) {
-    //persist to database
+  var $gender2 = $('#user_gender2').val()
+  if ($gender2.length >= 4) {
+    // sending the data to controller to persist to DB
+    $.ajax({
+      url: '/users/:id',
+      type: "put",
+      dataType: "json",
+      data: {
+        gender: $gender2,
+      }
+    })
+    // .then(function(data) {
+    //   if (data.error) {
+    //     $("#errors").html(`Error: ${data.error}`);
+    //   }
+    //   else {
+    //     $("#errors").html('');
+    //     $("#additional-information").hide();
+    //     $("#update-button").show();
+    //     if (data.shelter) $("#shelter-button").show();
+    //     else $("#shelter-button").hide();
+    //   }
+    // })
     console.log('it works');
     window.location.href="/products/:id"
   }

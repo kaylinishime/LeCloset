@@ -9,19 +9,16 @@ res.render('products', { user: req.user });
 
 
 function show (req, res, next) {
-  var req = rp.get({
+  var request = rp.get({
       uri: "http://api.shopstyle.com/api/v2/retailers?pid=" + process.env.API_KEY,
       json: true
   })
-
-  req.then(data => {
-    console.log(data)
+  request.then(data => {
     res.render('products', {
       retailers: data.retailers,
       user: req.user
-    })
-  })
-
+    });
+  });
 }
 
 function update (req, res, next) {

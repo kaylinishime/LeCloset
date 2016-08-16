@@ -25,11 +25,10 @@ HEADER
                 <% retailers.forEach(function(retailer) { %>
                 <div class="row">
                 <div class="col-md-4">
-                <li class="retailers>">
-                  <label><input type="checkbox" onclick="OnChangeCheckbox(this)" id="cbox1" value="first_checkbox">
-                  <a href="#"><%= retailer.name %></a>
-                </label>
-              </li>
+                <li class="retailers">
+                <input type="checkbox" class="cbox1" value="first_checkbox">
+                  <label data-id="<%= retailer.id %>"><a href="#"><%= retailer.name %></a></label></input>
+                </li>
 
               </div>
             </div>
@@ -46,7 +45,6 @@ HEADER
 <div class="row">
     <div class="col-md-10">
         <div class="view">
-            <section class="grid">
                 <div id="images">
                     <div class="grid__item shirts">
                         <div class="slider">
@@ -144,9 +142,7 @@ HEADER
                                 </div>
                             </div>
                         </div>
-
-            </section>
-            </div>
+                   </div>
             </div>
         </div>
     </div>
