@@ -17,8 +17,8 @@
 
 						$this.bind('mouseenter',function(){
 							$menu.find('.ldd_submenu').stop(true,true).hide();
-							$span.stop().animate({'width':'510px'},300,function(){
-								$this.find('.ldd_submenu').slideDown(300);
+							$span.stop().animate({'width':'400px'},200,function(){
+								$this.find('.ldd_submenu').slideDown(100);
 							});
 						}).bind('mouseleave',function(){
 							$this.find('.ldd_submenu').stop(true,true).hide();

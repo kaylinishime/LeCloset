@@ -27,7 +27,7 @@ $('#lets_do_this').on('click', function() {
   if ($gender.length >= 4) {
     //persist to database
     console.log('it works');
-    window.location.href="/"
+    window.location.href="/products"
   }
   else {
     // show error to the user
