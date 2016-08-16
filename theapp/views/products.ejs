@@ -10,6 +10,7 @@ HEADER
 
 <header>
 
+
 		<div class="box">
 			<ul id="ldd_menu" class="ldd_menu">
 				<li>
@@ -17,12 +18,12 @@ HEADER
 					<div class="ldd_submenu">
 
 						<ul id = "limheight">
-                <% retailers.forEach(function(retailer) { %>
+                <% products.forEach(function(products){%>
                 <div class="row">
                 <div class="col-md-4">
                 <li class="retailers>">
                   <label><input type="checkbox" onclick="OnChangeCheckbox(this)" id="cbox1" value="first_checkbox">
-                  <a href="#"><%= retailer.name %></a>
+                  <a href="#"><%= products.image.sizes.XLarge.url %></a>
                 </label>
               </li>
 
@@ -39,6 +40,7 @@ HEADER
 </header>
 
 <div class="row">
+<% products.forEach(function(products){%>
     <div class="col-md-10">
         <div class="view">
             <section class="grid">
@@ -47,7 +49,7 @@ HEADER
                         <div class="slider">
                             <div class="slider__item">
                                 <!-- APPEND OBJECT HERE -->
-                                <img src="../images/dress.png">
+                                <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                             </div>
                         </div>
                         <div class="meta">
@@ -66,7 +68,7 @@ HEADER
                             <div class="slider">
                                 <div class="slider__item">
                                     <!-- APPEND OBJECT HERE -->
-                                    <img src="../images/dress.png">
+                                    <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                                 </div>
                             </div>
                             <div class="meta">
@@ -85,7 +87,7 @@ HEADER
                                 <div class="slider">
                                     <div class="slider__item">
                                         <!-- APPEND OBJECT HERE -->
-                                        <img src="../images/dress.png">
+                                        <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                                     </div>
                                 </div>
                                 <div class="meta">
@@ -104,7 +106,7 @@ HEADER
                                     <div class="slider">
                                         <div class="slider__item">
                                             <!-- APPEND OBJECT HERE -->
-                                            <img src="../images/dress.png">
+                                            <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                                         </div>
                                     </div>
                                     <div class="meta">
@@ -123,7 +125,7 @@ HEADER
                                         <div class="slider">
                                             <div class="slider__item">
                                                 <!-- APPEND OBJECT HERE -->
-                                                <img src="../images/dress.png">
+                                                <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                                             </div>
                                         </div>
                                         <div class="meta">
@@ -145,6 +147,7 @@ HEADER
             </div>
         </div>
     </div>
+<% }) %>
 <div class="col-md-2">
 
 </div>

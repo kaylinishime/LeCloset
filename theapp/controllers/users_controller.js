@@ -1,5 +1,5 @@
 var User = require("../models/user");
-
+var rp = require("request-promise");
 
 function home (req, res, next) {
   console.log(req.user);
@@ -10,7 +10,17 @@ function home (req, res, next) {
 }
 
 function show (req, res, next) {
-res.render('profiles', { user: req.user });
+var req = rp.get({
+      uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY,
+      json: true
+  })
+  req.then(data => {
+    res.render('profiles', {
+      products: data.products,
+      user: req.user
+    })
+  })
+
 }
 
 function close (req, res, next) {

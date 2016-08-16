@@ -58,14 +58,20 @@ MAIN PRODUCTS GRID
 |||||||||||||||||||||||||||||||||||||||||
 -->
 
+<% products.forEach(function(products){%>
 <div class="view">
+
     <section class="grid">
+
         <div id="images">
     <div class="grid__item shirts">
         <div class="slider">
             <div class="slider__item">
+
                 <!-- APPEND OBJECT HERE -->
-                 <img src="../images/dress.png">
+              <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+
+
             </div>
         </div>
         <div class="meta">
@@ -82,7 +88,8 @@ MAIN PRODUCTS GRID
 
         <div class="grid__item shirts">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -96,7 +103,8 @@ MAIN PRODUCTS GRID
         </div>
         <div class="grid__item shoes">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -110,7 +118,8 @@ MAIN PRODUCTS GRID
         </div>
         <div class="grid__item dresses">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -127,7 +136,10 @@ MAIN PRODUCTS GRID
     <!-- /grid-->
 </div>
 <!-- /view -->
+ <% }) %>
 
 
   </div>
 </header>
+
+
