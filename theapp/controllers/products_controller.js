@@ -1,5 +1,6 @@
 var User = require("../models/user");
 var rp = require("request-promise");
+var _ = require('underscore');
 
 function index (req, res, next) {
 res.render('products', { user: req.user });

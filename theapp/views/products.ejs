@@ -35,11 +35,20 @@
 				<li>
 					<span>Search Retailers</span>
 					<div class="ldd_submenu">
+
 						<ul id = "limheight">
-							<li class="ldd_heading">By Location</li>
-              <% retailers.forEach(function(retailer){ %>
-                <li class="retailers>"><a href="#"><%= retailer.name %></a></li>
-              <% }) %>
+                <% retailers.forEach(function(retailer) { %>
+                <div class="row">
+                <div class="col-md-4">
+                <li class="retailers>">
+                  <label><input type="checkbox" id="cbox1" value="first_checkbox">
+                  <a href="#"><%= retailer.name %></a>
+                </label>
+              </li>
+
+              </div>
+            </div>
+        <% }) %>
 						</ul>
 						<a class="ldd_subfoot" href="#"> + New Deals</a>
 					</div>
@@ -49,104 +58,115 @@
 		</div>
 </header>
 
+<div class="row">
+    <div class="col-md-10">
+        <div class="view">
+            <section class="grid">
+                <div id="images">
+                    <div class="grid__item shirts">
+                        <div class="slider">
+                            <div class="slider__item">
+                                <!-- APPEND OBJECT HERE -->
+                                <img src="../images/dress.png">
+                            </div>
+                        </div>
+                        <div class="meta">
+                            <h3 class="meta__title">Miriam Classic</h3>
+                            <span class="meta__brand">Miriam</span>
+                            <span class="meta__price">$79</span>
+                        </div>
+                        <button class="action action--button action--buy">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="text-hidden">Add to cart</span>
+                        </button>
+                    </div>
 
-  <div class="view">
-      <section class="grid">
-          <div id="images">
-      <div class="grid__item shirts">
-          <div class="slider">
-              <div class="slider__item">
-                  <!-- APPEND OBJECT HERE -->
-                   <img src="../images/dress.png">
-              </div>
-          </div>
-          <div class="meta">
-              <h3 class="meta__title">Miriam Classic</h3>
-              <span class="meta__brand">Miriam</span>
-              <span class="meta__price">$79</span>
-          </div>
-          <button class="action action--button action--buy">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="text-hidden">Add to cart</span>
-          </button>
-              </div>
+                    <div id="images">
+                        <div class="grid__item shirts">
+                            <div class="slider">
+                                <div class="slider__item">
+                                    <!-- APPEND OBJECT HERE -->
+                                    <img src="../images/dress.png">
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <h3 class="meta__title">Miriam Classic</h3>
+                                <span class="meta__brand">Miriam</span>
+                                <span class="meta__price">$79</span>
+                            </div>
+                            <button class="action action--button action--buy">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="text-hidden">Add to cart</span>
+                            </button>
+                        </div>
 
-              <div id="images">
-          <div class="grid__item shirts">
-              <div class="slider">
-                  <div class="slider__item">
-                      <!-- APPEND OBJECT HERE -->
-                       <img src="../images/dress.png">
-                  </div>
-              </div>
-              <div class="meta">
-                  <h3 class="meta__title">Miriam Classic</h3>
-                  <span class="meta__brand">Miriam</span>
-                  <span class="meta__price">$79</span>
-              </div>
-              <button class="action action--button action--buy">
-                  <i class="fa fa-shopping-cart"></i>
-                  <span class="text-hidden">Add to cart</span>
-              </button>
-                  </div>
+                        <div id="images">
+                            <div class="grid__item shirts">
+                                <div class="slider">
+                                    <div class="slider__item">
+                                        <!-- APPEND OBJECT HERE -->
+                                        <img src="../images/dress.png">
+                                    </div>
+                                </div>
+                                <div class="meta">
+                                    <h3 class="meta__title">Miriam Classic</h3>
+                                    <span class="meta__brand">Miriam</span>
+                                    <span class="meta__price">$79</span>
+                                </div>
+                                <button class="action action--button action--buy">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="text-hidden">Add to cart</span>
+                                </button>
+                            </div>
 
-                  <div id="images">
-              <div class="grid__item shirts">
-                  <div class="slider">
-                      <div class="slider__item">
-                          <!-- APPEND OBJECT HERE -->
-                           <img src="../images/dress.png">
-                      </div>
-                  </div>
-                  <div class="meta">
-                      <h3 class="meta__title">Miriam Classic</h3>
-                      <span class="meta__brand">Miriam</span>
-                      <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span class="text-hidden">Add to cart</span>
-                  </button>
-                      </div>
+                            <div id="images">
+                                <div class="grid__item shirts">
+                                    <div class="slider">
+                                        <div class="slider__item">
+                                            <!-- APPEND OBJECT HERE -->
+                                            <img src="../images/dress.png">
+                                        </div>
+                                    </div>
+                                    <div class="meta">
+                                        <h3 class="meta__title">Miriam Classic</h3>
+                                        <span class="meta__brand">Miriam</span>
+                                        <span class="meta__price">$79</span>
+                                    </div>
+                                    <button class="action action--button action--buy">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="text-hidden">Add to cart</span>
+                                    </button>
+                                </div>
 
-                      <div id="images">
-                  <div class="grid__item shirts">
-                      <div class="slider">
-                          <div class="slider__item">
-                              <!-- APPEND OBJECT HERE -->
-                               <img src="../images/dress.png">
-                          </div>
-                      </div>
-                      <div class="meta">
-                          <h3 class="meta__title">Miriam Classic</h3>
-                          <span class="meta__brand">Miriam</span>
-                          <span class="meta__price">$79</span>
-                      </div>
-                      <button class="action action--button action--buy">
-                          <i class="fa fa-shopping-cart"></i>
-                          <span class="text-hidden">Add to cart</span>
-                      </button>
-                          </div>
+                                <div id="images">
+                                    <div class="grid__item shirts">
+                                        <div class="slider">
+                                            <div class="slider__item">
+                                                <!-- APPEND OBJECT HERE -->
+                                                <img src="../images/dress.png">
+                                            </div>
+                                        </div>
+                                        <div class="meta">
+                                            <h3 class="meta__title">Miriam Classic</h3>
+                                            <span class="meta__brand">Miriam</span>
+                                            <span class="meta__price">$79</span>
+                                        </div>
+                                        <button class="action action--button action--buy">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="text-hidden">Add to cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                          <div id="images">
-                      <div class="grid__item shirts">
-                          <div class="slider">
-                              <div class="slider__item">
-                                  <!-- APPEND OBJECT HERE -->
-                                   <img src="../images/dress.png">
-                              </div>
-                          </div>
-                          <div class="meta">
-                              <h3 class="meta__title">Miriam Classic</h3>
-                              <span class="meta__brand">Miriam</span>
-                              <span class="meta__price">$79</span>
-                          </div>
-                          <button class="action action--button action--buy">
-                              <i class="fa fa-shopping-cart"></i>
-                              <span class="text-hidden">Add to cart</span>
-                          </button>
-                              </div>
-      </section>
+            </section>
+            </div>
+            </div>
+        </div>
     </div>
+<div class="col-md-2">
 
-    </div>
+</div>
+
+</div>
