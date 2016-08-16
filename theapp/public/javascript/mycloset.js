@@ -24,16 +24,43 @@
 							$this.find('.ldd_submenu').stop(true,true).hide();
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
 						});
+
 					});
 
-							    });
+var retailerIds = []
+$('.cbox1').click(function(event){
+	var label = $(event.target).next('label').text();
+	console.log(label)
+	// var retailerNames = $('<label>' + label.text() + '</label>')
+	
+    // retailerNames.data('id', label[0].dataset.id);
+		// $('.col-md-2').append(retailerNames);
+	})
 
-										//
-										// function OnChangeCheckbox(checkbox) {
-										// 							if(checkbox.checked){
-										// 								alert("it has been clicked")
-										// 							}
-										// 							else {
-										// 								alert("check box is not checked")
-										// 							}
-										// 						})
+
+	// grab retail id
+	// AJAX request sending ID to retailers create controller
+	// write code in controller to persist to database
+
+
+
+
+// if ($('input.cbox1').is(':checked')){
+// 	$.ajax({
+// 	url: '/retailers',
+// 	type: "create",
+// 	dataType: "json",
+// 	data: {
+// 	gender: $gender1,
+// }
+// })
+
+
+$('.names').click(function(event){
+	console.log(event.target)
+		if (event.target.is($('.names'))){
+				$(event.target).remove();
+		}
+	})
+
+});
