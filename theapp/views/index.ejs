@@ -5,24 +5,78 @@
     <a href="/"><img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" /></a>
   </div>
 
-  <div class="nav_right">
-    <ul class="">
-      <li><a href="#about">About</a></li>
-      <li><a href="#le_closet">Le Closet</a></li>
-      <li><a href="#contact">Contact</a></li>
-
+  <div>
       <% if (user) { %>
       <li><a href="/users/:id">My Closet</a></li>
+
       <li><span> or </span></li>
+
       <li><a href="/logout">Logout</a></li>
 
+
+
+
       <% } else { %>
-      <li><a href="/auth/google" onclick="window.open('/auth/google', 'newwindow', 'scrollbars=yes,resizable=yes,top=175,left=450,width=500,height=400'); return false;">Log In</a></li>
-      <li><span> or </span></li>
-      <li><a href="#">Register</a></li>
+        <!-- Login -->
+      <div class="nav_container_2">
+        <div id="modal_login" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+          <button type="button">Login</button>
+          <div class="morph-content">
+            <div>
+              <div class="content-style-form content-style-form-1">
+                <p class="icon icon-close">X</p>
+                <img id="logo_modal" src="../images/le_closet_logo.png" alt="company logo" />
+                <h4 class="center_me modal_header">Welcome Home</h4>
+
+                <a href="#" id="login" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
+
+                <form class="login_form_hidden">
+                  <p><label>Gender</label><input id="user_gender" type="text" /></p>
+                  <p><button id="lets_do_this">Lets Do This</button></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <strong class="joiner">or</strong>
+
+        <!-- Register -->
+        <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+          <button type="button">Register</button>
+
+          <div class="morph-content">
+            <div>
+              <div class="content-style-form content-style-form-2">
+                <p class="icon icon-close">X</p>
+
+                <h2>Register</h2>
+
+                <form>
+                  <p><label>Email</label><input type="text" /></p>
+                  <p><label>Password</label><input type="password" /></p>
+                  <p><label>Repeat Password</label><input type="password" /></p>
+                  <p><button>Sign Up</button></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <% } %>
 
-    </ul>
+      <div class="nav_container_1">
+        <ul class="">
+          <li><a href="#about">About</a></li>
+          <li><a href="#le_closet">Le Closet</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
   </div>
 </nav>
 
@@ -31,10 +85,11 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
+
 <header id="headerOne">
   <div class="container">
-    <h5 class="custom_subheading white_font">Retail therapy stored in one place</h5>
-    <h1 class="hero_heading white_font">What's in your closet?</h1>
+    <h5 class="hero_subheading">Retail therapy stored in one place</h5>
+    <h1 class="hero_heading">What's in your closet?</h1>
   </div>
 </header>
 
@@ -128,24 +183,33 @@ CONTACT
       <h2 class="section_heading">\ Contact \</h2>
 
       <div class="col-lg-4">
-        <img src="" alt="" />
-        <h2 class="subheading">Kayli Nishime</h2>
-        <h5>Founder</h5>
-        <p><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <img src="../images/ava.png" alt="" class="founder_image"/>
+        <h3 class="subheading">Kayli Nishime</h3>
+        <h5 class="center_me">Founder</h5>
+        <p class="center_me"><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
 
       <div class="col-lg-4">
-        <img src="" alt="" />
-        <h2 class="subheading">Christopher Lopez</h2>
-        <h5>Founder</h5>
-        <p><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <img src="../images/ava.png" alt="" class="founder_image"/>
+        <h3 class="subheading">Chris Lopez</h3>
+        <h5 class="center_me">Founder</h5>
+        <p class="center_me"><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
 
       <div class="col-lg-4">
-        <img src="" alt="" />
-        <h2 class="subheading">Billy Pruden</h2>
-        <h5>Founder</h5>
-        <p><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <img src="../images/ava.png" alt="" class="founder_image"/>
+        <h3 class="subheading">Billy Pruden</h3>
+        <h5 class="center_me">Founder</h5>
+        <p class="center_me"><a href="#">Faceboook</a> - <a href="#">Instagram</a> - <a href="#">Twitter</a></p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
 
     </div>

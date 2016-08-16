@@ -23,7 +23,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/',
+    successRedirect : '/close',
     failureRedirect : '/'
   }
 ));
@@ -36,11 +36,12 @@ router.get('/logout', function(req, res){
 
 // eventually needs authController.verify
 router.get('/users/:id', usersController.show);
+// closes any window sent to this route
+router.get('/close', usersController.close);
 // eventually needs authController.verify
 router.get('/users/:id', usersController.edit);
 router.put('/users/:id', usersController.update);
 router.delete('/users/:id', usersController.destroy);
-
 
 router.get('/products/', productsController.index);
 router.get('/products/:id', productsController.show);

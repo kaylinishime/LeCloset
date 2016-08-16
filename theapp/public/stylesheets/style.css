@@ -8,7 +8,9 @@
 body {
   font-size: 16px;
   background-color: #eee;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Raleway', sans-serif;
+  font-weight: 200;
+  line-height: 1.4em;
 }
 header {
   margin-top: 100px;
@@ -50,7 +52,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 a {
-  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
   font-size: 1em;
   line-height: 30px;
   color: black;
@@ -58,7 +61,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #F0C637;
+  color: #606060;
 }
 li {
    float: left;
@@ -70,7 +73,7 @@ ul {
 }
 footer {
   height: 100px;
-  background-color: #eee;
+  background-color: white;
   margin-top: 25px;
   clear:both;
 }
@@ -83,47 +86,69 @@ section {
   margin: 10px;
   margin-left: 45px;
 }
+
+#logo_modal {
+  width:250px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
 .comment_link {
-  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  font-family: 'Raleway', sans-serif;
   font-size: 1em;
   line-height: 30px;
   color: #F0C637;
   text-decoration: none;
 }
 .section_heading{
- font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
- line-height: 30px;
- margin-top: .4em;
- margin-bottom: .6em;
- text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: .4em;
+  margin-bottom: .6em;
+  text-align: center;
 }
 .hero_heading{
- font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
- line-height: 30px;
- margin-top: .4em;
- margin-bottom: 5em;
- text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 7em;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3.5em;
+  color: white;
 }
-.white_font {
-    color: white;
-}
-.yellow_font {
-  color: #F0C637;
+.hero_subheading{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 7.2em;
+  margin-bottom: .5em;
+  color: white;
 }
 
 .custom_subheading{
- font-family: 'Ubuntu', sans-serif;
+ font-family: 'Raleway', sans-serif;
  text-align: center;
- font-weight: 300;
+ font-weight: 400;
  margin-top: 11em;
  margin-bottom: 2.5em;
 }
 
 .subheading {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-weight: 300;
-  margin: .5em;
+  font-weight: 400;
+  margin: .4em;
+}
+
+.founder_image {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .home_button {
@@ -135,6 +160,7 @@ section {
  margin: 1em;
  text-align: center;
 }
+
 .buttom_margin {
  margin-top: 70px;
  margin-bottom: 20em;
@@ -146,28 +172,17 @@ section {
  border: solid 1px #BC9B28;
  border-radius: 6px;
  font-size: 1.2em;
- font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+ font-family: 'Raleway', sans-serif;
  color: white;
 }
 
 .standard_button:hover {
  background-color: white;
- color: #F0C637;
-}
-.nav_right {
- float: right;
- margin-top: 35px;
- margin-right: 55px;
+ color: #606060;
 }
 
 .nav_left {
  float: left;
-}
-
-.logo{
- width:230px;
- margin: 25px;
- margin-left: 45px;
 }
 
 .nav_bar {
@@ -187,21 +202,33 @@ section {
  z-index: 1;
 }
 
-.main_section{
- background-color: #F5F8FA;
+.nav_container_1 {
+  display: inline-block;
+  margin-top: 38px;
+  float: right;
 }
 
-.div_section {
- background-color: white;
- border-radius: 20px;
- border: solid 1px #979797;
- margin-top: 140px;
+.nav_container_2 {
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 40px;
+  float: right;
+}
+.google {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  margin-top: 28px;
+  display: block;
+}
+.login_form_hidden {
+  display: none;
 }
 
-.image_story {
- margin: 0 auto;
- display: block;
+.login_form_show {
+  display: block;
 }
+
 #about, #contact {
  background-color: #eee;
 }
@@ -217,73 +244,18 @@ section {
    -moz-background-clip: padding;
    background-clip: padding-box;
 }
-.form_input {
- width: 100%;
- height: 40px;
- display: block;
- margin: 0 auto;
- text-align: center;
- border-radius: 5px;
- border: #979797 solid 1px;
- background-color: #F2F2F2;
-}
-.comment_input {
-  width: 85%;
-  height: 40px;
-  display: inline;;
-  margin: 0 auto;
-  margin-right: 35px;
-  padding: 10px;
-  border-radius: 5px;
-  border: #979797 solid 1px;
-  background-color: #F2F2F2;
-}
+
 .field {
  margin-bottom: 25px;
 }
+
 .center_me {
- display: inline;
  text-align: center;
 }
 
 .wrapper {
  width: 85%;
  margin: 0 auto;
-}
-
-.container_left {
- width: 30%;
- margin-right: 5%;
- float: left;
- background-color: white;
- border-radius: 20px;
- border: solid 1px #979797;
- margin-top: 140px;
- min-height: 400px;
- margin-bottom: 30px;
-}
-
-.container_right {
- width: 65%;
- float: left;
- background-color: white;
- border-radius: 20px;
- border: solid 1px #979797;
- margin-top: 140px;
- min-height: 400px;
- margin-bottom: 30px;
-}
-
-.container_main {
- width: 100%;
- float: left;
- background-color: white;
- border-radius: 20px;
- border: solid 1px #979797;
- margin-top: 140px;
- padding:20px;
- min-height: 400px;
- margin-bottom: 30px;
 }
 
 .text_left {
@@ -297,127 +269,13 @@ section {
 .block_right {
  float: right;
 }
-#create_workout {
- margin: 3px;
-}
 
-#workout_sub_head {
- display: inline-block;
-}
-
-#upload_id {
- background-image: url('user-icon.png');
- background-size: cover;
- width: 200px;
- height: 200px;
- border-radius: 10px;
- border: solid 1px #979797;
- float: left;
- margin-bottom: 20px;
-}
-#upload_box {
- float: left;
- margin-top: 90px;
- margin-left: 40px;
-}
-#upload_text {
- font-size: .65em;
- margin-top: 10px;
-}
-.comment_author {
-  font-size: .75em;
-  margin-top: 10px;
-}
-
-#profile_image {
- height: auto;
- border-radius: 18.5px 18.5px 0px 0px;
- max-width: 100%;
- overflow: hidden;
- border: solid 1px #979797;
-}
-
-#profile_content {
- margin-left: 20px;
- margin-right: 20px;
-}
-
-.user_image {
- margin: 0 auto;
- margin-top: -50px;
- width: 100px;
- height: 100px;
- border-radius: 50px;
- background-color: white;
- border: solid 1px #979797;
- overflow: hidden;
-}
-.gear_icon {
- width:20px;
- height: 20px;
- float: right;
- margin-bottom: 15px;
- margin-right: 19px;
- margin-top: -20px;
-}
-.image_workout {
- width: 48.5%;
- margin-right: 3%;
- float: left;
-}
-.content_workout {
- width: 48.5%;
- float: right;
-}
-.workout_image {
- width: 100%;
-}
-.button_container_workout {
- clear: right;
- width: 100%;
- margin-top: 40px;
- text-align: center;
-}
-.workout_container {
-  width: 31%;
-  margin:1%;
-  float: left;
-  height: 350px;
-  overflow: hidden;
-  border: solid 1px #979797;
-  border-radius: 10px;
-}
-
-.image_workout_container {
-  width: 100%;
-  height: auto;
-  max-height: 250px;
-  overflow: hidden;
-  position: relative;
-}
-.custom_heading_workouts {
-  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
-  line-height: 30px;
-  margin-top: .4em;
-  margin-bottom: .6em;
-  text-align: center;
-  position: absolute;
-  top: 35%;
-  width: 100%;
-  color: white;
-}
-.workout_font {
-  font-size: .8em;
-  margin: 10px 20px;
-}
-.comment_container_workout {
-  clear: both;
-}
 .footer_font {
-  color: white;
+  font-weight: 400;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 45px;
 }
+
 .home_page_icon {
   height: 100px;
   width: 100px;
