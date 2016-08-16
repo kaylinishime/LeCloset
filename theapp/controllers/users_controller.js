@@ -1,11 +1,15 @@
 var User = require("../models/user");
 
 function home (req, res, next) {
+  console.log(req.user);
+  if (req.user) {
+    console.log(req.user._id);
+  }
   res.render('index', { user: req.user });
 }
 
 function show (req, res, next) {
-
+  res.json({msg: "Hello this workss"})
 }
 
 function close (req, res, next) {
@@ -30,5 +34,5 @@ module.exports = {
   close:    close,
   edit:     edit,
   update:   update,
-  destroy:  destroy
+  destroy:  destroy,
 }

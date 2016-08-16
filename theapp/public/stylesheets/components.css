@@ -139,7 +139,6 @@
 	left: 50% !important;
 	margin: -210px 0 0 -300px;
 	width: 600px;
-	height: 420px;
 	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 }
@@ -210,13 +209,13 @@
 .morph-button-modal-2.open .morph-content {
 	margin: -210px 0 0 -170px;
 	width: 340px;
-	height: 420px;
+	height: auto;
 }
 
 .morph-button-modal-3.open .morph-content {
 	margin: -255px 0 0 -210px;
 	width: 420px;
-	height: 510px;
+	height: auto;
 }
 
 .morph-button-modal-3.open .morph-content > div {

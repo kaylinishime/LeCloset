@@ -212,6 +212,13 @@ section {
   margin-top: 28px;
   display: block;
 }
+.login_form_hidden {
+  display: none;
+}
+
+.login_form_show {
+  display: block;
+}
 
 #about, #contact {
  background-color: #eee;
