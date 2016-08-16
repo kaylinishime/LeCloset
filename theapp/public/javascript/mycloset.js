@@ -25,4 +25,15 @@
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
 						});
 					});
-	            });
+
+							    });
+
+										//
+										// function OnChangeCheckbox(checkbox) {
+										// 							if(checkbox.checked){
+										// 								alert("it has been clicked")
+										// 							}
+										// 							else {
+										// 								alert("check box is not checked")
+										// 							}
+										// 						})
