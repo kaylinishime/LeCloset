@@ -9,10 +9,6 @@ var passport = require('passport');
 var debug = require('debug')('app:http');
 var _ = require('underscore');
 
-
-
-
-
 // load the env vars
 require('dotenv').load();
 
@@ -34,7 +30,6 @@ require('./config/passport');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

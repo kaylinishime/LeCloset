@@ -13,19 +13,12 @@ function show (req, res, next) {
       uri: "http://api.shopstyle.com/api/v2/retailers?pid=" + process.env.API_KEY,
       json: true
   })
-
-
   request.then(data => {
-    console.log(data)
     res.render('products', {
       retailers: data.retailers,
       user: req.user
-    })
-  })
-
-
-
-
+    });
+  });
 }
 
 function update (req, res, next) {

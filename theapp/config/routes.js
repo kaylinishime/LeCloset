@@ -2,16 +2,11 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 
-
 // Require controllers.
 var usersController = require('../controllers/users_controller');
 var productsController = require('../controllers/products_controller');
 var retailersController = require('../controllers/retailers_controller');
-
 // var authController = require('../controllers/auth_controller');
-
-/* GET users listing. */
-router.get('/', usersController.home);
 
 // google oauth login route
 router.get('/auth/google', passport.authenticate(
@@ -23,7 +18,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/close?action=register',
+    successRedirect : '/close',
+    // successRedirect : '/close?action=register',
     failureRedirect : '/'
   }
 ));
@@ -41,22 +37,25 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-// eventually needs authController.verify
-router.get('/users/:id', usersController.show);
-// closes any window sent to this route
+// CLOSES any window sent to this route
 router.get('/close', usersController.close);
+
+// USER routes
 // eventually needs authController.verify
+router.get('/', usersController.home);
+router.get('/users/:id', usersController.show);
 router.get('/users/:id', usersController.edit);
-router.put('/users/:id', usersController.update);
+router.patch('/users/:id', usersController.update);
 router.delete('/users/:id', usersController.destroy);
 
+// PRODUCT routes
 router.get('/products/', productsController.index);
 router.get('/products/:id', productsController.show);
-router.put('/products/:id', productsController.update);
+router.patch('/products/:id', productsController.update);
 router.delete('/products/:id', productsController.destroy);
 
-
-router.put('/retailers', retailersController.create);
+// RETAILER routes
+router.patch('/retailers', retailersController.create);
 router.delete('/retailers', retailersController.destroy);
 
 module.exports = router;
