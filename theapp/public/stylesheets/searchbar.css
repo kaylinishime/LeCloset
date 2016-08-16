@@ -72,10 +72,9 @@ a.ldd_subfoot{
 	z-index: 1;
 	position: relative;
 	width: 3000px;
-
-
 }
-ul.ldd_menu ul{
+
+ul.ldd_menu ul {
 	list-style: none;
 	float:left;
 	margin:20px 0px 10px 30px;
@@ -83,6 +82,7 @@ ul.ldd_menu ul{
 	z-index: 1;
 	position: relative;
 }
+
 li.ldd_heading{
 	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -134,27 +134,32 @@ span.reference a:hover{
 
 #limheight {
     height: 2000px;
-		width: 500px; /*your fixed height*/
-    -webkit-column-count: 5;
-       -moz-column-count: 5;
-            column-count: 5; /*3 in those rules is just placeholder -- can be anything*/
+		width: 600px; /*your fixed height*/
+    -webkit-column-count: 6;
+       -moz-column-count: 6;
+            column-count: 6; /*3 in those rules is just placeholder -- can be anything*/
 }
 #limheight li {
     display: inline-block; /*necessary*/
 }
 
 .view {
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 .col-md-10 {
+	margin-top: 50px;
 	border: 1px solid black;
-}
-.col-md-2 {
-	border: 1px solid black;
-	float: right;
+	height: 550px;
+	width: 980px;
 }
 
 .col-md-4 {
 	width: 400px;
+}
+.col-md-2 {
+	margin-top: 50px;
+	border: 1px solid black;
+	width: 300px;
+	height: 550px;
 }
