@@ -1,5 +1,6 @@
 var User = require("../models/user");
 
+
 function home (req, res, next) {
   console.log(req.user);
   if (req.user) {
@@ -9,7 +10,7 @@ function home (req, res, next) {
 }
 
 function show (req, res, next) {
-  res.json({msg: "Hello this workss"})
+res.render('profiles', { user: req.user });
 }
 
 function close (req, res, next) {
