@@ -20,6 +20,7 @@ passport.use(new GoogleStrategy({
             googleId: profile.id
           });
           newUser.save(function(err) {
+            req.session.user = newUser
             if (err) return cb(err);
             return cb(null, newUser);
           });
