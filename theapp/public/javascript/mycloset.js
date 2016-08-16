@@ -24,16 +24,14 @@
 							$this.find('.ldd_submenu').stop(true,true).hide();
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
 						});
+
 					});
 
-							    });
+$('.cbox1').click(function(event){
+			if ($('input.cbox1').is(':checked')){
+        alert('cbox1 is checked');
+			console.log($(event.target).next('label').text());
+	}
+})
 
-										//
-										// function OnChangeCheckbox(checkbox) {
-										// 							if(checkbox.checked){
-										// 								alert("it has been clicked")
-										// 							}
-										// 							else {
-										// 								alert("check box is not checked")
-										// 							}
-										// 						})
+});
