@@ -1,5 +1,4 @@
-
-	$(function() {
+$(function() {
 					/**
 					 * the menu
 					 */
@@ -27,40 +26,44 @@
 
 					});
 
-var retailerIds = []
+// var retailerIds = []
+
 $('.cbox1').click(function(event){
-	var label = $(event.target).next('label').text();
-	console.log(label)
-	// var retailerNames = $('<label>' + label.text() + '</label>')
-	
-    // retailerNames.data('id', label[0].dataset.id);
-		// $('.col-md-2').append(retailerNames);
-	})
-
-
-	// grab retail id
-	// AJAX request sending ID to retailers create controller
-	// write code in controller to persist to database
-
-
-
-
-// if ($('input.cbox1').is(':checked')){
-// 	$.ajax({
-// 	url: '/retailers',
-// 	type: "create",
-// 	dataType: "json",
-// 	data: {
-// 	gender: $gender1,
-// }
-// })
-
-
-$('.names').click(function(event){
-	console.log(event.target)
-		if (event.target.is($('.names'))){
-				$(event.target).remove();
+	if($(event.target).is(':checked')) {
+		var $label = $(event.target).next('label').text();
+		var $retailer_id = $(event.target).next('label').attr("data-id");
+		console.log($label)
+		console.log($retailer_id);
+			$.ajax({
+				url: '/retailers',
+				type: "put",
+				dataType: "json",
+				data: {
+					retailer: $retailer_id
+				}
+			});
 		}
-	})
+		else {
+			var $label = $(event.target).next('label').text();
+			var $retailer_id = $(event.target).next('label').attr("data-id");
+			console.log($label)
+			console.log($retailer_id);
+				$.ajax({
+					url: '/retailers',
+					type: "delete",
+					dataType: "json",
+					data: {
+						retailer: $retailer_id
+					}
+				});
+		}
+});
+
+	$('.names').click(function(event){
+		console.log(event.target)
+			if (event.target.is($('.names'))){
+					$(event.target).remove();
+			}
+		})
 
 });
