@@ -7,7 +7,6 @@ res.render('products', { user: req.user });
 
 }
 
-
 function show (req, res, next) {
   console.log(req.user);
   var request = rp.get({
