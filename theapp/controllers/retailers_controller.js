@@ -20,13 +20,14 @@ function create (req, res, next) {
       });
     };
   });
+}
 
   // // THEN STATEMENT for later
   // var req = rp.get({
   //     uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY + "&fl=r1&offset=0&limit=50",
   //     json: true
   // })
-
+  //
   // req.then(data => {
   //   console.log(data)
   //   res.render('products', {
@@ -35,7 +36,7 @@ function create (req, res, next) {
   //   })
   // })
 
-}
+
 
 function destroy (req, res, next) {
   User.findById(req.user._id, function(err, user) {
