@@ -23,20 +23,7 @@ function create (req, res, next) {
       });
     };
   });
-
-// THEN STATEMENT for later
-// PROBABLY DON'T NEED
-  // req.then(data => {
-  //   console.log(data)
-  //   res.render('products', {
-  //     retailers: data.retailers,
-  //     products: products.id
-  //   })
-  // })
-
-  // DONT COMMENT ME
-  }
-  // DONT COMMENT ME
+}
 
 function get (req, res, next) {
   User.findById(req.user._id, function(err, user) {
