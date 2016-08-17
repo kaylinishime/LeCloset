@@ -9,6 +9,7 @@ res.render('products', { user: req.user });
 
 
 function show (req, res, next) {
+  console.log(req.user);
   var request = rp.get({
       uri: "http://api.shopstyle.com/api/v2/retailers?pid=" + process.env.API_KEY,
       json: true
