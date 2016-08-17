@@ -1,10 +1,18 @@
 var User = require("../models/user");
+var rp = require("request-promise");
+var _ = require('underscore');
 
 function home (req, res, next) {
-  if (req.user) {
-    console.log(req.user._id);
-  }
-  res.render('index', { user: req.user });
+  var request = rp.get({
+      uri: "http://api.shopstyle.com/api/v2/retailers?pid=" + process.env.API_KEY,
+      json: true
+  })
+  request.then(data => {
+    res.render('index', {
+      retailers: data.retailers,
+      user: req.user
+    });
+  });
 }
 
 function show (req, res, next) {
@@ -30,6 +38,8 @@ function update(req, res, next) {
       }
       else {
         if(req.body.gender) user.gender = req.body.gender;
+        if(req.body.retailer1 >= 1) user.retailers.push(req.body.retailer1);
+        if(req.body.retailer2 >= 1) user.retailers.push(req.body.retailer2);
         user.save(function(err, user) {
           if (err) {
             res.json({error: err})
