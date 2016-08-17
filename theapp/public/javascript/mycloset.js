@@ -31,8 +31,9 @@ var retailerIds = []
 $('.cbox1').click(function(event){
 	var label = $(event.target).next('label').text();
 	console.log(label)
+	console.log($(event.target).next('label').attr('data-id'))
 	// var retailerNames = $('<label>' + label.text() + '</label>')
-	
+
     // retailerNames.data('id', label[0].dataset.id);
 		// $('.col-md-2').append(retailerNames);
 	})
