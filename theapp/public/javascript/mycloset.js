@@ -1,5 +1,4 @@
-
-	$(function() {
+$(function() {
 					/**
 					 * the menu
 					 */
@@ -27,12 +26,14 @@
 
 					});
 
+
 var retailerIds = []
 $('.cbox1').click(function(event){
 	var label = $(event.target).next('label').text();
 	console.log(label)
+	console.log($(event.target).next('label').attr('data-id'))
 	// var retailerNames = $('<label>' + label.text() + '</label>')
-	
+
     // retailerNames.data('id', label[0].dataset.id);
 		// $('.col-md-2').append(retailerNames);
 	})
@@ -45,22 +46,57 @@ $('.cbox1').click(function(event){
 
 
 
-// if ($('input.cbox1').is(':checked')){
-// 	$.ajax({
-// 	url: '/retailers',
-// 	type: "create",
-// 	dataType: "json",
-// 	data: {
-// 	gender: $gender1,
-// }
-// })
 
-
-$('.names').click(function(event){
-	console.log(event.target)
-		if (event.target.is($('.names'))){
-				$(event.target).remove();
+$('.cbox1').click(function(event){
+	if($(event.target).is(':checked')) {
+		var $label = $(event.target).next('label').text();
+		var $retailer_id = $(event.target).next('label').attr("data-id");
+		console.log($label)
+		console.log($retailer_id);
+			$.ajax({
+				url: '/retailers',
+				type: "put",
+				dataType: "json",
+				data: {
+					retailer: $retailer_id
+				}
+			});
 		}
-	})
+		else {
+			var $label = $(event.target).next('label').text();
+			var $retailer_id = $(event.target).next('label').attr("data-id");
+			console.log($label)
+			console.log($retailer_id);
+				$.ajax({
+					url: '/retailers',
+					type: "delete",
+					dataType: "json",
+					data: {
+						retailer: $retailer_id
+					}
+				});
+		}
+});
+
+var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {}, $checkboxes = $("#checkbox-container :checkbox");
+
+$('.cbox1').on('change', function(){
+    checkboxValues[this.id] = this.checked;
+
+
+  localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+});
+
+// On page load
+$.each(checkboxValues, function(key, value) {
+  $("#" + key).prop('checked', value);
+});
+
+	// $('.names').click(function(event){
+	// 	console.log(event.target)
+	// 		if (event.target.is($('.names'))){
+	// 				$(event.target).remove();
+	// 		}
+	// 	})
 
 });

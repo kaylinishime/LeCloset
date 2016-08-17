@@ -55,7 +55,8 @@ router.patch('/products/:id', productsController.update);
 router.delete('/products/:id', productsController.destroy);
 
 // RETAILER routes
-router.patch('/retailers', retailersController.create);
+router.get('/retailers', retailersController.get);
+router.put('/retailers', retailersController.create);
 router.delete('/retailers', retailersController.destroy);
 
 module.exports = router;

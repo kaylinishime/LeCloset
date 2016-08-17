@@ -26,8 +26,16 @@ HEADER
                 <div class="row">
                 <div class="col-md-4">
                 <li class="retailers">
+
+                <% if (user.retailers.indexOf(retailer.id) > -1) {%>
+                <input type="checkbox" class="cbox1" value="first_checkbox" checked >
+                  <label data-id="<%= retailer.id %>"><%= retailer.name %></label>
+                </input>
+                <%} else {%>
                 <input type="checkbox" class="cbox1" value="first_checkbox">
-                  <label data-id="<%= retailer.id %>"><a href="#"><%= retailer.name %></a></label></input>
+                  <label data-id="<%= retailer.id %>"><%= retailer.name %></label>
+                </input>
+                <%}%>
                 </li>
 
               </div>
@@ -147,6 +155,8 @@ HEADER
         </div>
     </div>
 <div class="col-md-2">
+
+
 
 </div>
 
