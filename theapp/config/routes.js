@@ -55,6 +55,7 @@ router.patch('/products/:id', productsController.update);
 router.delete('/products/:id', productsController.destroy);
 
 // RETAILER routes
+router.get('/retailers', retailersController.get);
 router.put('/retailers', retailersController.create);
 router.delete('/retailers', retailersController.destroy);
 
