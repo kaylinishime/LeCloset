@@ -53,7 +53,7 @@ function get (req, res, next) {
 
     Promise.all(promises)
             .then(data => {
-              console.log(data)
+              // console.log(data)
               // This is an array converter that sets up the following the line.
               var mappedJson = data.map(function(json) {
                 // returns my original JSON with just the products array inside
@@ -61,13 +61,13 @@ function get (req, res, next) {
               })
               var flatJson = _.flatten(mappedJson)
               var finalJson = _.shuffle(flatJson)
+              console.log(finalJson);
               res.json(finalJson)
 
               // res.render('products', {
               //   retailers: data.retailers,
               //   products: products.id
               // })
-
     });
   });
 }
