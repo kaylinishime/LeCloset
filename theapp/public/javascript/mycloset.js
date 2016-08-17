@@ -1,5 +1,4 @@
-
-	$(function() {
+$(function() {
 					/**
 					 * the menu
 					 */
@@ -27,6 +26,7 @@
 
 					});
 
+<<<<<<< HEAD
 var retailerIds = []
 $('.cbox1').click(function(event){
 	var label = $(event.target).next('label').text();
@@ -46,22 +46,43 @@ $('.cbox1').click(function(event){
 
 
 
-// if ($('input.cbox1').is(':checked')){
-// 	$.ajax({
-// 	url: '/retailers',
-// 	type: "create",
-// 	dataType: "json",
-// 	data: {
-// 	gender: $gender1,
-// }
-// })
 
-
-$('.names').click(function(event){
-	console.log(event.target)
-		if (event.target.is($('.names'))){
-				$(event.target).remove();
+$('.cbox1').click(function(event){
+	if($(event.target).is(':checked')) {
+		var $label = $(event.target).next('label').text();
+		var $retailer_id = $(event.target).next('label').attr("data-id");
+		console.log($label)
+		console.log($retailer_id);
+			$.ajax({
+				url: '/retailers',
+				type: "put",
+				dataType: "json",
+				data: {
+					retailer: $retailer_id
+				}
+			});
 		}
-	})
+		else {
+			var $label = $(event.target).next('label').text();
+			var $retailer_id = $(event.target).next('label').attr("data-id");
+			console.log($label)
+			console.log($retailer_id);
+				$.ajax({
+					url: '/retailers',
+					type: "delete",
+					dataType: "json",
+					data: {
+						retailer: $retailer_id
+					}
+				});
+		}
+});
+
+	$('.names').click(function(event){
+		console.log(event.target)
+			if (event.target.is($('.names'))){
+					$(event.target).remove();
+			}
+		})
 
 });
