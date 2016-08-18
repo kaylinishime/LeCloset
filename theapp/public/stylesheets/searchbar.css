@@ -3,7 +3,6 @@ ul.ldd_menu{
 	padding:0;
 	display:block;
 	height:50px;
-	background-color:#FFF;
 	list-style:none;
   color: #000;
 	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -12,12 +11,9 @@ ul.ldd_menu{
 
 }
 
-.box {
-	width: 100%;
-}
 
 #ldd_menu {
-	width: 100%;
+	width: 50%;
 }
 ul.ldd_menu a{
 	text-decoration:none;
@@ -31,7 +27,7 @@ ul.ldd_menu > li > span{
 	color:#fff;
 	background: #24252a;
 	height:30px;
-	width: 100%;
+	width: 20%;
 	line-height:30px;
 	cursor:default;
 	padding:1px 20px;

@@ -2,6 +2,7 @@ $(function() {
 					// THE MENU
 					var $menu = $('#ldd_menu');
 
+
 					//  for each list element,
 					//  we show the submenu when hovering and
 					//  expand the span element (title) to 510px
@@ -10,15 +11,14 @@ $(function() {
 						var $this = $(this);
 						var $span = $this.children('span');
 						$span.data('width',$span.width());
-
-						$this.bind('mouseenter',function(){
-							$menu.find('.ldd_submenu').stop(true,true).hide();
-							$span.stop().animate({'width':'400px'},200,function(){
-								$this.find('.ldd_submenu').slideDown(100);
+						$this.bind('mouseenter', function(){
+						$menu.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':'200px'},500,function(){
+						$this.find('.ldd_submenu').slideDown(200);
 							});
-						}).bind('mouseleave',function(){
-							$this.find('.ldd_submenu').stop(true,true).hide();
-							$span.stop().animate({'width':$span.data('width')+'px'},300);
+					}).bind('mouseleave',function(){
+						$this.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':$span.data('width')+'px'},500);
 
 							// make template
 							render = _.template($('#product-template').html());
@@ -31,6 +31,7 @@ $(function() {
 									} else {
 										console.log(product);
 										product.forEach(function(products) {
+											$('.product-item').html("")
 											$('.product-item').append(render(products))
 										});
 									}
