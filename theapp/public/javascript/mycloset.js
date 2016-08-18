@@ -24,14 +24,16 @@ $(function() {
 							render = _.template($('#product-template').html());
 							console.log('mouseleave');
 
+							$('.uil-ring-css').removeClass('hide')
 							$.get('/retailers', function(product) {
 									console.log(product)
 									if(product.error){
 										console.log(product.error)
 									} else {
 										console.log(product);
+										$('.product-item').html("")
+										$('.uil-ring-css').addClass('hide')
 										product.forEach(function(products) {
-											$('.product-item').html("")
 											$('.product-item').append(render(products))
 										});
 									}
