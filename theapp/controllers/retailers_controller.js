@@ -28,11 +28,10 @@ function create (req, res, next) {
 function get (req, res, next) {
   User.findById(req.user._id, function(err, user) {
     var promises = []
-
     user.retailers.forEach(function (retailer) {
       var req = rp.get({
         uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY +
-        `&fl=r${retailer}&offset=0&limit=50`,
+        `&fl=r${retailer}&offset=0&limit=5`,
         json: true
       })
       promises.push(req)
@@ -49,12 +48,7 @@ function get (req, res, next) {
               var flatJson = _.flatten(mappedJson)
               var finalJson = _.shuffle(flatJson)
               console.log(finalJson);
-              res.json(finalJson)
-
-              // res.render('products', {
-              //   retailers: data.retailers,
-              //   products: products.id
-              // })
+              res.json(finalJson);
     });
   });
 }

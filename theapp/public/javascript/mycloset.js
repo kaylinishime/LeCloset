@@ -1,4 +1,6 @@
-$(function() {
+
+
+// $(function() {
 					/**
 					 * the menu
 					 */
@@ -22,29 +24,23 @@ $(function() {
 						}).bind('mouseleave',function(){
 							$this.find('.ldd_submenu').stop(true,true).hide();
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
-						});
 
-					});
+							// make template
+							render = _.template($('#product-template').html());
+							console.log('mouseleave');
 
-
-var retailerIds = []
-$('.cbox1').click(function(event){
-	var label = $(event.target).next('label').text();
-	console.log(label)
-	console.log($(event.target).next('label').attr('data-id'))
-	// var retailerNames = $('<label>' + label.text() + '</label>')
-
-    // retailerNames.data('id', label[0].dataset.id);
-		// $('.col-md-2').append(retailerNames);
-	})
-
-
-	// grab retail id
-	// AJAX request sending ID to retailers create controller
-	// write code in controller to persist to database
-
-
-
+							$.get('/retailers', function(product) {
+									console.log(product)
+									if(product.error){
+										console.log(product.error)
+									} else {
+										console.log(product);
+										product.forEach(function(products) {
+											$('.product-item').append(render(products))
+										});
+									}
+							})
+						})
 
 
 $('.cbox1').click(function(event){
@@ -78,25 +74,5 @@ $('.cbox1').click(function(event){
 		}
 });
 
-var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {}, $checkboxes = $("#checkbox-container :checkbox");
-
-$('.cbox1').on('change', function(){
-    checkboxValues[this.id] = this.checked;
-
-
-  localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
 });
-
-// On page load
-$.each(checkboxValues, function(key, value) {
-  $("#" + key).prop('checked', value);
-});
-
-	// $('.names').click(function(event){
-	// 	console.log(event.target)
-	// 		if (event.target.is($('.names'))){
-	// 				$(event.target).remove();
-	// 		}
-	// 	})
-
-});
+// });
