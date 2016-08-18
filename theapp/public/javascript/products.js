@@ -14,7 +14,7 @@ $menu.children('li').each(function(){
 		}).bind('mouseleave',function(){
 			$this.find('.ldd_submenu').stop(true,true).hide();
 			$span.stop().animate({'width':$span.data('width')+'px'},500);
-				$('.product-item').hide();
+			$('.product-item').html("")
 			// make template
 			render = _.template($('#product-template').html());
 			console.log('mouseleave');

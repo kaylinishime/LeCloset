@@ -112,7 +112,7 @@ ul.ldd_menu ul li a{
 	position: relative;
 }
 ul.ldd_menu ul li a:hover{
-	background:#fff;
+	background-color:grey;
 	z-index: 1;
 	position: relative;
 
