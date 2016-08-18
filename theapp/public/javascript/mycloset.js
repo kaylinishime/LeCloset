@@ -1,16 +1,11 @@
-
-
-// $(function() {
-					/**
-					 * the menu
-					 */
+$(function() {
+					// THE MENU
 					var $menu = $('#ldd_menu');
 
-					/**
-					 * for each list element,
-					 * we show the submenu when hovering and
-					 * expand the span element (title) to 510px
-					 */
+					//  for each list element,
+					//  we show the submenu when hovering and
+					//  expand the span element (title) to 510px
+
 					$menu.children('li').each(function(){
 						var $this = $(this);
 						var $span = $this.children('span');
@@ -39,11 +34,12 @@
 											$('.product-item').append(render(products))
 										});
 									}
-							})
-						})
-
+							});
+						});
 
 $('.cbox1').click(function(event){
+	// Checks to see if the box is checked.
+	// IF yes THEN add the retailer ID to the DB under user.retailers
 	if($(event.target).is(':checked')) {
 		var $label = $(event.target).next('label').text();
 		var $retailer_id = $(event.target).next('label').attr("data-id");
@@ -59,6 +55,7 @@ $('.cbox1').click(function(event){
 			});
 		}
 		else {
+			// IF no THEN remove the retailer ID from the DB under user.retailers
 			var $label = $(event.target).next('label').text();
 			var $retailer_id = $(event.target).next('label').attr("data-id");
 			console.log($label)
@@ -75,4 +72,4 @@ $('.cbox1').click(function(event){
 });
 
 });
-// });
+});

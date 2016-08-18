@@ -48,6 +48,8 @@ $('.google').on('click', function() {
 // Redirects LOGIN user to their Product Search page.
 $('#lets_do_this1').on('click', function() {
   var $gender1 = $('#user_gender1').val()
+  var $retailer1 = $('#retailer1 option:selected').attr('data-id')
+  var $retailer2 = $('#retailer2 option:selected').attr('data-id')
   if ($gender1.length >= 4) {
     // sending the data to controller to persist to DB
     $.ajax({
@@ -56,6 +58,8 @@ $('#lets_do_this1').on('click', function() {
       dataType: "json",
       data: {
         gender: $gender1,
+        retailer1: $retailer1,
+        retailer2: $retailer2
       }
     })
       // .then(function(data) {
@@ -82,6 +86,8 @@ $('#lets_do_this1').on('click', function() {
 // Redirects REGISTER user to their Product Search page.
 $('#lets_do_this2').on('click', function() {
   var $gender2 = $('#user_gender2').val()
+  var $retailer3 = $('#retailer3 option:selected').attr('data-id')
+  var $retailer4 = $('#retailer4 option:selected').attr('data-id')
   if ($gender2.length >= 4) {
     // sending the data to controller to persist to DB
     $.ajax({
@@ -90,6 +96,8 @@ $('#lets_do_this2').on('click', function() {
       dataType: "json",
       data: {
         gender: $gender2,
+        retailer1: $retailer3,
+        retailer2: $retailer4
       }
     })
     // .then(function(data) {

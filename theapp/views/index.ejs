@@ -38,7 +38,39 @@
                 <a href="#" id="login" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
 
                 <form class="login_form_hidden">
-                  <p><label>Gender</label><input id="user_gender1" type="text" /></p>
+                  <p>
+                    <label>Gender</label>
+                    <select id="user_gender1" name="Gender">
+                      <option value="nul">- -</option>
+                      <option value="Male"> Male </option>
+                      <option value="Female"> Female </option>
+                    </select>
+                  </p>
+
+                  <p>
+                    <label>Retailer You Like 1</label>
+                    <select id="retailer1" name="Retailer 1">
+                      <option value="retailer"> - - </option>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
+                        </option>
+                      <$ }) $>
+                    </select>
+                  </p>
+
+                  <p>
+                    <label>Retailer You Like 2</label>
+                    <select id="retailer2" name="Retailer 2">
+                      <option value="retailer"> - - </option>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
+                        </option>
+                      <$ }) $>
+                    </select>
+                  </p>
+
                   <p><button id="lets_do_this1">Lets Do This</button></p>
                 </form>
 
@@ -62,7 +94,39 @@
                 <a href="#" id="register" ><img class="google" src="../images/oauthGoogle.png" alt="" /></a>
 
                 <form class="login_form_hidden">
-                  <p><label>Gender</label><input id="user_gender2" type="text" /></p>
+                  <p>
+                    <label>Gender</label>
+                    <select id="user_gender2" name="Gender">
+                      <option value="nul">- -</option>
+                      <option value="Male"> Male </option>
+                      <option value="Female"> Female </option>
+                    </select>
+                  </p>
+
+                  <p>
+                    <label>Retailer You Like 1</label>
+                    <select id="retailer3" name="Retailer 1">
+                      <option value="retailer"> - - </option>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
+                        </option>
+                      <$ }) $>
+                    </select>
+                  </p>
+
+                  <p>
+                    <label>Retailer You Like 2</label>
+                    <select id="retailer4" name="Retailer 2">
+                      <option value="retailer"> - - </option>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
+                        </option>
+                      <$ }) $>
+                    </select>
+                  </p>
+
                   <p><button id="lets_do_this2">Lets Do This</button></p>
                 </form>
 
