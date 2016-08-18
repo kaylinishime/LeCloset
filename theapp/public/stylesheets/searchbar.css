@@ -1,6 +1,19 @@
+#searchbar {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	border: 1px solid grey;
+	position: fixed;
+	z-index: 1;
+}
+
+.glyphicon.glyphicon-menu-down {
+margin-left: 2px;
+}
+
 ul.ldd_menu{
-	margin:0px;
-	padding:0;
+	margin:-2px;
+	padding: 0px;
 	display:block;
 	height:50px;
 	list-style:none;
@@ -8,7 +21,7 @@ ul.ldd_menu{
 	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
   position: absolute;
   z-index: 1;
-
+	font-size: 12px;
 }
 
 
@@ -24,8 +37,8 @@ ul.ldd_menu > li{
 }
 ul.ldd_menu > li > span{
 
-	color:#fff;
-	background: #24252a;
+	color:#000;
+	background: #fff;
 	height:30px;
 	width: 20%;
 	line-height:30px;
@@ -99,7 +112,7 @@ ul.ldd_menu ul li a{
 	position: relative;
 }
 ul.ldd_menu ul li a:hover{
-	background:#fff;
+	background-color:grey;
 	z-index: 1;
 	position: relative;
 
