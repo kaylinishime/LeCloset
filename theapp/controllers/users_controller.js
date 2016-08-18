@@ -50,6 +50,7 @@ function update(req, res, next) {
         if(req.body.gender) user.gender = req.body.gender;
         if(req.body.retailer1 >= 1) user.retailers.push(req.body.retailer1);
         if(req.body.retailer2 >= 1) user.retailers.push(req.body.retailer2);
+        if(req.body.product) user.products.push(req.body.product);
         user.save(function(err, user) {
           if (err) {
             res.json({error: err})

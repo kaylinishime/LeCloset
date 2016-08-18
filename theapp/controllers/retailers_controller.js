@@ -29,12 +29,19 @@ function get (req, res, next) {
   User.findById(req.user._id, function(err, user) {
     // Establish an empty Promises Array
     var promises = []
+    // Determining and setting the gender for search params
+    var gender ;
+    if (req.user.gender == "Male") {
+      gender = "men"
+    }
+    else {
+      gender = "women"
+    }
     // Iterate through each retail ID in our User model.
     user.retailers.forEach(function (retailer) {
       var req = rp.get({
         uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY +
-        `&fl=r${retailer}&offset=0&limit=10`,
-
+        `&fts=%22${gender}%22&fl=r${retailer}&offset=0&limit=10`,
         json: true
       })
       // Pushing the API response into our Promises Array
