@@ -5,12 +5,12 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-<header>
-	<$ include ../views/partials/nav.ejs $>
-</header>
 
-<!-- Drop Down Menu -->
-<section id="drop-down">
+<$ include ../views/partials/nav.ejs $>
+
+<header>
+
+	</header>
 	<div class="box">
 		<ul id="ldd_menu" class="ldd_menu">
 			<li>
@@ -43,21 +43,32 @@ HEADER
 			</li>
 		</ul>
 	</div>
-</section>
 
+<div class="row">
+	<div class="col-md-4">
+		<script type="text/template" id="product-template">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="image-wrapper">
+						<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
+					</div>
+					<div class="info-wrapper">
+						<h6 class ="unbrandedName"><%= name %></h6>
+						<p class="retailer">Retailer: <%= retailer.name %></p>
+						<p class="price">Price: <%= priceLabel %></p>
+					</div>
 
-<script type="text/template" id="product-template">
-
-	<div class="thumbnail">
-		<div class="caption">
-			<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
-			<p class="product-name"><%= unbrandedName %></p>
-			<p>. . .</p>
-			<a href="#" class="btn btn-primary add-to-closet" data-id="<%= id %>"role="button">Button</a>
-		</div>
+					<div class="buttons">
+						<p>
+							<a href="#" class="btn btn-primary" role="button">Add To Closet</a>
+							<a href="<%= clickUrl %>" class="btn btn-default add-to-closet" role="button">Buy Now</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</script>
 	</div>
-
-</script>
+</div>
 
 <div class="product-item">
 

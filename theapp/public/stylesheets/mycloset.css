@@ -1,5 +1,6 @@
 /* Product grid */
 
+
 .product-item {
 	width: 90%;
 	margin: 0 auto;
@@ -20,6 +21,8 @@ height: 470px;
 	width: 100%;
 }
 
+
+
 .activator {
 	display: block;
 	max-height: 300px;
@@ -27,9 +30,46 @@ height: 470px;
 	width: auto;
 	max-width: 100%;
 	height: auto;
+	position: inherit;
+}
+
+img {
+	position: relative;
+}
+
+.image-wrapper {
+	height: 280px;
+	position: inherit;
+}
+
+.unbrandedName {
+	font-size: 14px;
+	margin-top: 30px;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+}
+
+.info-wrapper {
+	height: 50px;
+	position: inherit;
+}
+
+.price {
+	line-height: 16px;
+	text-align: center;
+}
+
+.retailer{
+	line-height: 6px;
+	text-align: center;
 }
 
 .product-name {
-	margin: 10px;
 	height: 50px;
+}
+
+.buttons {
+	margin-top: 40px;
+	position: absolute;
 }
