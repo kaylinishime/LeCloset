@@ -5,12 +5,12 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-
-<$ include ../views/partials/nav.ejs $>
-
 <header>
+	<$ include ../views/partials/nav.ejs $>
+</header>
 
-	</header>
+<!-- Drop Down Menu -->
+<section id="drop-down">
 	<div class="box">
 		<ul id="ldd_menu" class="ldd_menu">
 			<li>
@@ -43,6 +43,7 @@ HEADER
 			</li>
 		</ul>
 	</div>
+</section>
 
 
 
@@ -51,21 +52,18 @@ HEADER
 
 	<div class="thumbnail">
 		<div class="caption">
-
-				<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
-				<h3><%= name %></h3>
-				<p>...</p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-
+			<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
+			<p class="product-name"><%= unbrandedName %></p>
+			<p>...</p>
+			<a href="#" class="btn btn-primary" role="button">Button</a>
+			<a href="#" class="btn btn-default" role="button">Button</a>
 		</div>
 	</div>
-</div>
-</div>
 
 </script>
 
 
 
+<div class="product-item">
 
-    <div class="product-item"></div>
-    </div>
+</div>
