@@ -113,7 +113,9 @@ $('#lets_do_this2').on('click', function() {
     //   }
     // })
     console.log('it works');
+
     window.location.href="/products/:id"
+
   }
   else {
     // show error to the user

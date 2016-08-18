@@ -16,7 +16,17 @@ function home (req, res, next) {
 }
 
 function show (req, res, next) {
-res.render('profiles', { user: req.user });
+var request = rp.get({
+      uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY,
+      json: true
+  })
+  request.then(data => {
+    res.render('profiles', {
+      products: data.products,
+      user: req.user
+    })
+  })
+
 }
 
 function close (req, res, next) {
