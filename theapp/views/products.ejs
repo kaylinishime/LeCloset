@@ -9,6 +9,8 @@ HEADER
 <$ include ../views/partials/nav.ejs $>
 
 <header>
+
+	</header>
 	<div class="box">
 		<ul id="ldd_menu" class="ldd_menu">
 			<li>
@@ -41,41 +43,29 @@ HEADER
 			</li>
 		</ul>
 	</div>
-</header>
+
+
+
 
 <script type="text/template" id="product-template">
-	<span><%= name %></span>
+
+	<div class="thumbnail">
+		<div class="caption">
+
+				<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
+				<h3><%= name %></h3>
+				<p>...</p>
+				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+
+		</div>
+	</div>
+</div>
+</div>
+
 </script>
 
-<div class="row">
-	<% products.forEach(function(products) { %>
-		<div class="col-md-10">
-			<div class='uil-ring-css' style='transform:scale(0.59);'>
-				<div></div>
-			</div>
-		</div>
-		<div class="view">
-			<div>
-				<li class="product-item"></li>
-			</div>
-			<div id="images">
-				<div class="grid__item shirts">
-					<div class="slider">
-						<div class="slider__item">
-							<!-- APPEND OBJECT HERE -->
-							<img src="../images/dress.png">
-						</div>
-					</div>
-					<div class="meta">
-						<h3 class="meta__title">Miriam Classic</h3>
-						<span class="meta__brand">Miriam</span>
-						<span class="meta__price">$79</span>
-					</div>
-					<button class="action action--button action--buy">
-						<i class="fa fa-shopping-cart"></i>
-						<span class="text-hidden">Add to cart</span>
-					</button>
-				</div>
-			</div>
-		</div>
-</div>
+
+
+
+    <div class="product-item"></div>
+    </div>
