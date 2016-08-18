@@ -5,13 +5,17 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-
-<$ include ../views/partials/nav.ejs $>
-
 <header>
-
+	<$ include ../views/partials/nav.ejs $>
 </header>
-	<div id ="searchbar">
+
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+DROP DOWN MENU
+|||||||||||||||||||||||||||||||||||||||||
+-->
+
+<div id ="searchbar">
 	<div class="box">
 		<ul id="ldd_menu" class="ldd_menu">
 			<li>
@@ -46,7 +50,11 @@ HEADER
 	</div>
 </div>
 
-
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+PRODUCT BRICKS
+|||||||||||||||||||||||||||||||||||||||||
+-->
 
 <div class="row">
 	<div class="col-md-12">
@@ -65,21 +73,20 @@ HEADER
 
 					<div class="buttons">
 						<p>
-							<a href="#" class="btn btn-primary" role="button">Add To Closet</a>
-							<a href="<%= clickUrl %>" class="btn btn-default add-to-closet" role="button">Buy Now</a>
+							<a href="#" class="btn btn-primary add-to-closet" data-id="<%= id %>"role="button">Add To Closet</a>
+							<a href="<%= clickUrl %>" class="btn btn-default " role="button">Buy Now</a>
 						</p>
 					</div>
 				</div>
 			</div>
 		</script>
-<div class='uil-ring-css hide' style='transform:scale(0.59);'><div>
 
+		<div class='uil-ring-css hide' style='transform:scale(0.59);'>
+			<div></div>
+		</div>
 	</div>
 </div>
-</div>
-
 
 <div class="product-item">
-
 
 </div>
