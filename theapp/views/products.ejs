@@ -53,15 +53,19 @@ HEADER
 		<div class="caption">
 			<div class="image-wrapper">
 				<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
-				<h4 class ="unbrandedName"><%= name %></h4>
-				<p>...</p>
+
+				</div>
+					<div class="info-wrapper">
+					<h6 class ="unbrandedName"><%= name %></h6>
+					<p class="retailer">Retailer: <%= retailer.name %></p>
+					<p class="price">Price: <%= priceLabel %></p>
+					</div>
+
+					<div class="buttons">
+					<p><a href="#" class="btn btn-primary" role="button">Add To Closet</a> <a href="<%= clickUrl %>" class="btn btn-default" role="button">Buy Now</a></p>
 			</div>
 
-				<div class="buttons">
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			</div>
 
-			</div>
 
 		</div>
 		</div>
@@ -74,4 +78,6 @@ HEADER
 
 
 
-    <div class="product-item"></div>
+    <div class="product-item">
+    	
+    </div>

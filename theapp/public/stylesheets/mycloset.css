@@ -21,10 +21,7 @@ height: 470px;
 	width: 100%;
 }
 
-.image-wrapper {
-	height: 380px;
-	border: 1px solid black;
-}
+
 
 .activator {
 	display: block;
@@ -40,20 +37,39 @@ img {
 	position: relative;
 }
 
-.unbrandedName {
-	font-size: 18px;
-	margin-top: 10px;
-	text-align: center;
-	position: relative;
+.image-wrapper {
+	height: 280px;
+	position: inherit;
 }
 
+.unbrandedName {
+	font-size: 14px;
+	margin-top: 30px;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+}
+
+.info-wrapper {
+	height: 50px;
+	position: inherit;
+}
+
+.price {
+	line-height: 16px;
+	text-align: center;
+}
+
+.retailer{
+	line-height: 6px;
+	text-align: center;
+}
 
 .product-name {
-	margin: 10px;
 	height: 50px;
 }
 
 .buttons {
-	margin-top: 20px;
+	margin-top: 40px;
 	position: absolute;
 }
