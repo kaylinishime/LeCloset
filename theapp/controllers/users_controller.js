@@ -38,7 +38,6 @@ function edit (req, res, next) {
 }
 
 function update(req, res, next) {
-    // User.findById(req.params.id, function(err, user) {
     User.findById(req.user._id, function(err, user) {
       if (err) {
         res.json({message: `Could not find user because ${err}`});

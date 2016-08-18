@@ -52,7 +52,8 @@ router.delete('/users/:id', usersController.destroy);
 // PRODUCT routes
 router.get('/products/', productsController.index);
 router.get('/products/:id', productsController.show);
-router.put('/products/:id', productsController.update);
+router.get('/products/:id/get', productsController.get);
+router.put('/products/:id', productsController.create);
 router.delete('/products/:id', productsController.destroy);
 
 // RETAILER routes
