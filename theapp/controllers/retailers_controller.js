@@ -34,6 +34,7 @@ function get (req, res, next) {
       var req = rp.get({
         uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY +
         `&fl=r${retailer}&offset=0&limit=10`,
+
         json: true
       })
       // Pushing the API response into our Promises Array
@@ -50,7 +51,7 @@ function get (req, res, next) {
               var flatJson = _.flatten(mappedJson)
               var finalJson = _.shuffle(flatJson)
               console.log(finalJson);
-              res.json(finalJson)
+              res.json(finalJson);
     });
   });
 }

@@ -19,9 +19,23 @@ $(function() {
 						}).bind('mouseleave',function(){
 							$this.find('.ldd_submenu').stop(true,true).hide();
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
-						});
 
-					});
+							// make template
+							render = _.template($('#product-template').html());
+							console.log('mouseleave');
+
+							$.get('/retailers', function(product) {
+									console.log(product)
+									if(product.error){
+										console.log(product.error)
+									} else {
+										console.log(product);
+										product.forEach(function(products) {
+											$('.product-item').append(render(products))
+										});
+									}
+							});
+						});
 
 $('.cbox1').click(function(event){
 	// Checks to see if the box is checked.
@@ -57,4 +71,5 @@ $('.cbox1').click(function(event){
 		}
 });
 
+});
 });

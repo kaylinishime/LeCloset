@@ -6,7 +6,7 @@
   </div>
 
   <div>
-      <% if (user) { %>
+      <$ if (user) { $>
         <!-- My Closet -->
         <div class="nav_container_2">
           <div id="my_closet" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
@@ -23,7 +23,7 @@
           </div>
         </div>
 
-      <% } else { %>
+      <$ } else { $>
         <!-- Login -->
       <div class="nav_container_2">
         <div id="modal_login1" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
@@ -51,11 +51,11 @@
                     <label>Retailer You Like 1</label>
                     <select id="retailer1" name="Retailer 1">
                       <option value="retailer"> - - </option>
-                      <% retailers.forEach(function(retailer) { %>
-                        <option value="<%= retailer.name %>" data-id="<%= retailer.id %>">
-                          <%= retailer.name %>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
                         </option>
-                      <% }) %>
+                      <$ }) $>
                     </select>
                   </p>
 
@@ -63,11 +63,11 @@
                     <label>Retailer You Like 2</label>
                     <select id="retailer2" name="Retailer 2">
                       <option value="retailer"> - - </option>
-                      <% retailers.forEach(function(retailer) { %>
-                        <option value="<%= retailer.name %>" data-id="<%= retailer.id %>">
-                          <%= retailer.name %>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
                         </option>
-                      <% }) %>
+                      <$ }) $>
                     </select>
                   </p>
 
@@ -107,11 +107,11 @@
                     <label>Retailer You Like 1</label>
                     <select id="retailer3" name="Retailer 1">
                       <option value="retailer"> - - </option>
-                      <% retailers.forEach(function(retailer) { %>
-                        <option value="<%= retailer.name %>" data-id="<%= retailer.id %>">
-                          <%= retailer.name %>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
                         </option>
-                      <% }) %>
+                      <$ }) $>
                     </select>
                   </p>
 
@@ -119,11 +119,11 @@
                     <label>Retailer You Like 2</label>
                     <select id="retailer4" name="Retailer 2">
                       <option value="retailer"> - - </option>
-                      <% retailers.forEach(function(retailer) { %>
-                        <option value="<%= retailer.name %>" data-id="<%= retailer.id %>">
-                          <%= retailer.name %>
+                      <$ retailers.forEach(function(retailer) { $>
+                        <option value="<$= retailer.name $>" data-id="<$= retailer.id $>">
+                          <$= retailer.name $>
                         </option>
-                      <% }) %>
+                      <$ }) $>
                     </select>
                   </p>
 
@@ -137,7 +137,7 @@
 
       </div>
 
-      <% } %>
+      <$ } $>
 
       <div class="nav_container_1">
         <ul class="">
