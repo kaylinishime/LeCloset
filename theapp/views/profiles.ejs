@@ -59,13 +59,22 @@ MAIN PRODUCTS GRID
 -->
 
 <div class="view">
+
     <section class="grid">
+
+<% products.forEach(function(products){%>
         <div id="images">
+
+<div id="dog">
+
+        <div class="catA">
+
     <div class="grid__item shirts">
         <div class="slider">
             <div class="slider__item">
-                <!-- APPEND OBJECT HERE -->
-                 <img src="../images/dress.png">
+
+              <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+
             </div>
         </div>
         <div class="meta">
@@ -78,11 +87,14 @@ MAIN PRODUCTS GRID
             <span class="text-hidden">Add to cart</span>
         </button>
     </div>
+    </div>
 
+        <div class="catB">
 
         <div class="grid__item shirts">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -94,9 +106,14 @@ MAIN PRODUCTS GRID
               <span class="text-hidden">Add to cart</span>
           </button>
         </div>
+        </div>
+
+        <div class="catC">
+
         <div class="grid__item shoes">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -108,9 +125,14 @@ MAIN PRODUCTS GRID
               <span class="text-hidden">Add to cart</span>
           </button>
         </div>
+        </div>
+
+        <div class="catD">
+
         <div class="grid__item dresses">
           <div class="slider">
-              <div class="slider__item"><img src="../images/dress.png"></div>
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
           </div>
           <div class="meta">
               <h3 class="meta__title">Miriam Classic</h3>
@@ -122,12 +144,36 @@ MAIN PRODUCTS GRID
               <span class="text-hidden">Add to cart</span>
           </button>
         </div>
+        </div>
+
+        <div class="catE">
+
+        <div class="grid__item shoes">
+          <div class="slider">
+              <div class="slider__item"><img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+</div>
+          </div>
+          <div class="meta">
+              <h3 class="meta__title">Miriam Classic</h3>
+              <span class="meta__brand">Miriam</span>
+              <span class="meta__price">$79</span>
+          </div>
+          <button class="action action--button action--buy">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="text-hidden">Add to cart</span>
+          </button>
+        </div>
+        </div>
+
+</div>
+</div>
+ <% }) %>
+
     </section>
 </div>
-    <!-- /grid-->
-</div>
-<!-- /view -->
 
 
   </div>
 </header>
+
+
