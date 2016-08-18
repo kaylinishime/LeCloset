@@ -2,28 +2,28 @@
 <nav class="nav_bar">
   <div class="nav_left">
     <!-- Logo image -->
-    <a href="/"><img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" /></a>
+    <a href="/">
+      <img id="logo_nav" src="../images/le_closet_logo.png" alt="company logo" />
+    </a>
   </div>
 
   <div>
-      <$ if (user) { $>
-        <!-- My Closet -->
-        <div class="nav_container_2">
-          <div id="my_closet" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-            <button type="button">My Closet</button>
-
-          </div>
-
-          <strong class="joiner">or</strong>
-
-          <!-- LogOut -->
-          <div id="log_out" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-            <button type="button">Log Out</button>
-
-          </div>
+    <$ if (user) { $>
+      <!-- My Closet -->
+      <div class="nav_container_2">
+        <div id="my_closet" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+          <button type="button">My Closet</button>
         </div>
 
-      <$ } else { $>
+        <strong class="joiner">or</strong>
+
+        <!-- LogOut -->
+        <div id="log_out" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+          <button type="button">Log Out</button>
+        </div>
+      </div>
+
+    <$ } else { $>
         <!-- Login -->
       <div class="nav_container_2">
         <div id="modal_login1" class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
@@ -134,11 +134,8 @@
             </div>
           </div>
         </div>
-
       </div>
-
-      <$ } $>
-
+    <$ } $>
       <div class="nav_container_1">
         <ul class="">
           <li><a href="#about">About</a></li>
@@ -146,7 +143,6 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-
   </div>
 </nav>
 
