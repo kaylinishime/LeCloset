@@ -45,13 +45,13 @@ router.get('/close', usersController.close);
 router.get('/', usersController.home);
 router.get('/users/:id', usersController.show);
 router.get('/users/:id', usersController.edit);
-router.patch('/users/:id', usersController.update);
+router.put('/users/:id', usersController.update);
 router.delete('/users/:id', usersController.destroy);
 
 // PRODUCT routes
 router.get('/products/', productsController.index);
 router.get('/products/:id', productsController.show);
-router.patch('/products/:id', productsController.update);
+router.put('/products/:id', productsController.update);
 router.delete('/products/:id', productsController.destroy);
 
 // RETAILER routes

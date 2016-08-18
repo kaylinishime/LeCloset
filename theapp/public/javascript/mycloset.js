@@ -1,14 +1,11 @@
 $(function() {
-					/**
-					 * the menu
-					 */
+					// THE MENU
 					var $menu = $('#ldd_menu');
 
-					/**
-					 * for each list element,
-					 * we show the submenu when hovering and
-					 * expand the span element (title) to 510px
-					 */
+					//  for each list element,
+					//  we show the submenu when hovering and
+					//  expand the span element (title) to 510px
+
 					$menu.children('li').each(function(){
 						var $this = $(this);
 						var $span = $this.children('span');
@@ -22,32 +19,27 @@ $(function() {
 						}).bind('mouseleave',function(){
 							$this.find('.ldd_submenu').stop(true,true).hide();
 							$span.stop().animate({'width':$span.data('width')+'px'},300);
+
+							// make template
+							render = _.template($('#product-template').html());
+							console.log('mouseleave');
+
+							$.get('/retailers', function(product) {
+									console.log(product)
+									if(product.error){
+										console.log(product.error)
+									} else {
+										console.log(product);
+										product.forEach(function(products) {
+											$('.product-item').append(render(products))
+										});
+									}
+							});
 						});
 
-					});
-
-
-var retailerIds = []
 $('.cbox1').click(function(event){
-	var label = $(event.target).next('label').text();
-	console.log(label)
-	console.log($(event.target).next('label').attr('data-id'))
-	// var retailerNames = $('<label>' + label.text() + '</label>')
-
-    // retailerNames.data('id', label[0].dataset.id);
-		// $('.col-md-2').append(retailerNames);
-	})
-
-
-	// grab retail id
-	// AJAX request sending ID to retailers create controller
-	// write code in controller to persist to database
-
-
-
-
-
-$('.cbox1').click(function(event){
+	// Checks to see if the box is checked.
+	// IF yes THEN add the retailer ID to the DB under user.retailers
 	if($(event.target).is(':checked')) {
 		var $label = $(event.target).next('label').text();
 		var $retailer_id = $(event.target).next('label').attr("data-id");
@@ -63,6 +55,7 @@ $('.cbox1').click(function(event){
 			});
 		}
 		else {
+			// IF no THEN remove the retailer ID from the DB under user.retailers
 			var $label = $(event.target).next('label').text();
 			var $retailer_id = $(event.target).next('label').attr("data-id");
 			console.log($label)
@@ -78,25 +71,5 @@ $('.cbox1').click(function(event){
 		}
 });
 
-var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {}, $checkboxes = $("#checkbox-container :checkbox");
-
-$('.cbox1').on('change', function(){
-    checkboxValues[this.id] = this.checked;
-
-
-  localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
 });
-
-// On page load
-$.each(checkboxValues, function(key, value) {
-  $("#" + key).prop('checked', value);
-});
-
-	// $('.names').click(function(event){
-	// 	console.log(event.target)
-	// 		if (event.target.is($('.names'))){
-	// 				$(event.target).remove();
-	// 		}
-	// 	})
-
 });

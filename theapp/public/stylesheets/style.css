@@ -19,6 +19,10 @@ header {
   -o-background-size: cover;
   background-size: cover;
 }
+select {
+  width: 100%;
+  font-size: 2em;
+}
 
 #headerOne {
     background: url('../images/header.jpg') no-repeat top center fixed;
