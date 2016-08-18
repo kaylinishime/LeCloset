@@ -14,7 +14,7 @@ $menu.children('li').each(function(){
 		}).bind('mouseleave',function(){
 			$this.find('.ldd_submenu').stop(true,true).hide();
 			$span.stop().animate({'width':$span.data('width')+'px'},500);
-
+				$('.product-item').hide();
 			// make template
 			render = _.template($('#product-template').html());
 			console.log('mouseleave');
@@ -26,7 +26,7 @@ $menu.children('li').each(function(){
 							console.log(product.error)
 						} else {
 								console.log(product);
-								$('.product-item').html("")
+								$('.product-item').show();
 								$('.uil-ring-css').addClass('hide')
 								product.forEach(function(products) {
 									$('.product-item').append(render(products))
