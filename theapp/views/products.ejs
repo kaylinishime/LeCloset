@@ -5,44 +5,54 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-
-<$ include ../views/partials/nav.ejs $>
-
 <header>
+	<$ include ../views/partials/nav.ejs $>
+</header>
 
-	</header>
-	<div class="box">
-		<ul id="ldd_menu" class="ldd_menu">
-			<li>
-				<span>Search Retailers</span>
-				<div class="ldd_submenu">
-					<ul id="limheight">
-						<$ retailers.forEach(function(retailer) { $>
-							<div class="row">
-								<div class="col-md-4">
-									<li class="retailers">
-										<$ if (user.retailers.indexOf(retailer.id) > -1) { $>
-											<input type="checkbox" class="cbox1" value="first_checkbox" checked>
-												<label data-id="<$= retailer.id $>">
-													<$=retailer.name $>
-												</label>
-											</input>
-										<$ } else { $>
-											<input type="checkbox" class="cbox1" value="first_checkbox">
-												<label data-id="<$= retailer.id $>">
-													<$=retailer.name $>
-												</label>
-											</input>
-										<$ } $>
-									</li>
-								</div>
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+DROP DOWN MENU
+|||||||||||||||||||||||||||||||||||||||||
+-->
+
+<div class="box">
+	<ul id="ldd_menu" class="ldd_menu">
+		<li>
+			<span>Search Retailers</span>
+			<div class="ldd_submenu">
+				<ul id="limheight">
+					<$ retailers.forEach(function(retailer) { $>
+						<div class="row">
+							<div class="col-md-4">
+								<li class="retailers">
+									<$ if (user.retailers.indexOf(retailer.id) > -1) { $>
+										<input type="checkbox" class="cbox1" value="first_checkbox" checked>
+											<label data-id="<$= retailer.id $>">
+												<$=retailer.name $>
+											</label>
+										</input>
+									<$ } else { $>
+										<input type="checkbox" class="cbox1" value="first_checkbox">
+											<label data-id="<$= retailer.id $>">
+												<$=retailer.name $>
+											</label>
+										</input>
+									<$ } $>
+								</li>
 							</div>
-						<$ }); $>
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</div>
+						</div>
+					<$ }); $>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+PRODUCT BRICKS
+|||||||||||||||||||||||||||||||||||||||||
+-->
 
 <div class="row">
 	<div class="col-md-4">
@@ -60,8 +70,8 @@ HEADER
 
 					<div class="buttons">
 						<p>
-							<a href="#" class="btn btn-primary" role="button">Add To Closet</a>
-							<a href="<%= clickUrl %>" class="btn btn-default add-to-closet" role="button">Buy Now</a>
+							<a href="#" class="btn btn-primary add-to-closet" data-id="<%= id %>"role="button">Add To Closet</a>
+							<a href="<%= clickUrl %>" class="btn btn-default " role="button">Buy Now</a>
 						</p>
 					</div>
 				</div>

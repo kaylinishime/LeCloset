@@ -6,153 +6,186 @@ HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
 
-<$ include ../views/partials/nav.ejs $>
-
-    <!--
-|||||||||||||||||||||||||||||||||||||||||
-BOTTOM BAR WITH FILTER AND CART INFO
-|||||||||||||||||||||||||||||||||||||||||
--->
 <header>
-  <div class="container">
-    <div class="bar">
-
-      <div class="filter">
-        <span class="filter__label">Filter: </span>
-        <button class="allbutton">All</button>
-        <button class="jacketbutton">
-          <span class="jackets">Jackets</span>
-        </button>
-        <button class="shirtbutton">
-          <span class="action__text">Shirts</span>
-        </button>
-        <button class="dressbutton">
-          <span class="action__text">Dresses</span>
-        </button>
-        <button class="trouserbutton">
-          <span class="action__text">Trousers</span>
-        </button>
-        <button class="shoebutton">
-          <span class="action__text">Shoes</span>
-        </button>
-      </div>
-
-      <button class="cart">
-        <i class="cart__icon fa fa-shopping-cart"></i>
-        <span class="text-hidden">Shopping cart</span>
-        <span class="cart__count">0</span>
-      </button>
-    </div>
+  <$ include ../views/partials/nav.ejs $>
+</header>
 
 <!--
 |||||||||||||||||||||||||||||||||||||||||
 MAIN PRODUCTS GRID
 |||||||||||||||||||||||||||||||||||||||||
 -->
-    <div class="view">
-      <section class="grid">
-        <% products.forEach(function(products){%>
-          <div id="images">
-            <div id="dog">
-
-              <div class="catA">
-                <div class="grid__item shirts">
-                  <div class="slider">
-                    <div class="slider__item">
-                      <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
-                    </div>
-                  </div>
-                  <div class="meta">
-                    <h3 class="meta__title">Miriam Classic</h3>
-                    <span class="meta__brand">Miriam</span>
-                    <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="text-hidden">Add to cart</span>
-                  </button>
+<!-- <div class="view">
+  <section class="grid">
+    <% products.forEach(function(products){%>
+      <div id="images">
+        <div id="dog">
+          <div class="catA">
+            <div class="grid__item shirts">
+              <div class="slider">
+                <div class="slider__item">
+                  <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
                 </div>
               </div>
-
-              <div class="catB">
-                <div class="grid__item shirts">
-                  <div class="slider">
-                    <div class="slider__item">
-                      <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
-                    </div>
-                  </div>
-                  <div class="meta">
-                    <h3 class="meta__title">Miriam Classic</h3>
-                    <span class="meta__brand">Miriam</span>
-                    <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="text-hidden">Add to cart</span>
-                  </button>
-                </div>
+              <div class="meta">
+                <h3 class="meta__title">Miriam Classic</h3>
+                <span class="meta__brand">Miriam</span>
+                <span class="meta__price">$79</span>
               </div>
-
-              <div class="catC">
-                <div class="grid__item shoes">
-                  <div class="slider">
-                    <div class="slider__item">
-                      <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
-                    </div>
-                  </div>
-                  <div class="meta">
-                    <h3 class="meta__title">Miriam Classic</h3>
-                    <span class="meta__brand">Miriam</span>
-                    <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="text-hidden">Add to cart</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="catD">
-                <div class="grid__item dresses">
-                  <div class="slider">
-                    <div class="slider__item">
-                      <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
-                    </div>
-                  </div>
-                  <div class="meta">
-                    <h3 class="meta__title">Miriam Classic</h3>
-                    <span class="meta__brand">Miriam</span>
-                    <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="text-hidden">Add to cart</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="catE">
-                <div class="grid__item shoes">
-                  <div class="slider">
-                    <div class="slider__item">
-                      <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
-                    </div>
-                  </div>
-                  <div class="meta">
-                    <h3 class="meta__title">Miriam Classic</h3>
-                    <span class="meta__brand">Miriam</span>
-                    <span class="meta__price">$79</span>
-                  </div>
-                  <button class="action action--button action--buy">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="text-hidden">Add to cart</span>
-                  </button>
-                </div>
-              </div>
+              <button class="action action--button action--buy">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text-hidden">Add to cart</span>
+              </button>
             </div>
           </div>
-        <% }) %>
-      </section>
+
+          <div class="catB">
+            <div class="grid__item shirts">
+              <div class="slider">
+                <div class="slider__item">
+                  <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+                </div>
+              </div>
+              <div class="meta">
+                <h3 class="meta__title">Miriam Classic</h3>
+                <span class="meta__brand">Miriam</span>
+                <span class="meta__price">$79</span>
+              </div>
+              <button class="action action--button action--buy">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text-hidden">Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="catC">
+            <div class="grid__item shoes">
+              <div class="slider">
+                <div class="slider__item">
+                  <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+                </div>
+              </div>
+              <div class="meta">
+                <h3 class="meta__title">Miriam Classic</h3>
+                <span class="meta__brand">Miriam</span>
+                <span class="meta__price">$79</span>
+              </div>
+              <button class="action action--button action--buy">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text-hidden">Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="catD">
+            <div class="grid__item dresses">
+              <div class="slider">
+                <div class="slider__item">
+                  <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+                </div>
+              </div>
+              <div class="meta">
+                <h3 class="meta__title">Miriam Classic</h3>
+                <span class="meta__brand">Miriam</span>
+                <span class="meta__price">$79</span>
+              </div>
+              <button class="action action--button action--buy">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text-hidden">Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="catE">
+            <div class="grid__item shoes">
+              <div class="slider">
+                <div class="slider__item">
+                  <img src="<%= products.image.sizes.XLarge.url %>" alt="image">
+                </div>
+              </div>
+              <div class="meta">
+                <h3 class="meta__title">Miriam Classic</h3>
+                <span class="meta__brand">Miriam</span>
+                <span class="meta__price">$79</span>
+              </div>
+              <button class="action action--button action--buy">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text-hidden">Add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </section>
+</div> -->
+
+<div class="row">
+	<div class="col-md-4">
+
+		<script type="text/template" id="profile-template">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="image-wrapper">
+						<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
+					</div>
+					<div class="info-wrapper">
+						<h6 class ="unbrandedName"><%= name %></h6>
+						<p class="retailer">Retailer: <%= retailer.name %></p>
+						<p class="price">Price: <%= priceLabel %></p>
+					</div>
+
+					<div class="buttons">
+						<p>
+							<a href="#" class="btn btn-primary remove-from-closet" data-id="<%= id %>"role="button" role="button">Remove From Closet</a>
+							<a href="<%= clickUrl %>" class="btn btn-default" role="button">Buy Now</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</script>
+
+	</div>
+</div>
+
+<div class="product-item">
+
+</div>
+
+
+
+    <!--
+|||||||||||||||||||||||||||||||||||||||||
+FILTER FOOTER
+|||||||||||||||||||||||||||||||||||||||||
+-->
+<div class="container">
+  <div class="bar">
+
+    <div class="filter">
+      <span class="filter__label">Filter: </span>
+      <button class="allbutton">All</button>
+      <button class="jacketbutton">
+        <span class="jackets">Jackets</span>
+      </button>
+      <button class="shirtbutton">
+        <span class="action__text">Shirts</span>
+      </button>
+      <button class="dressbutton">
+        <span class="action__text">Dresses</span>
+      </button>
+      <button class="trouserbutton">
+        <span class="action__text">Trousers</span>
+      </button>
+      <button class="shoebutton">
+        <span class="action__text">Shoes</span>
+      </button>
     </div>
+
+    <button class="cart">
+      <i class="cart__icon fa fa-shopping-cart"></i>
+      <span class="text-hidden">Shopping cart</span>
+      <span class="cart__count">0</span>
+    </button>
   </div>
-</header>
+</div>
