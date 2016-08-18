@@ -38,7 +38,6 @@ function edit (req, res, next) {
 }
 
 function update(req, res, next) {
-    // User.findById(req.params.id, function(err, user) {
     User.findById(req.user._id, function(err, user) {
       if (err) {
         res.json({message: `Could not find user because ${err}`});
@@ -50,7 +49,6 @@ function update(req, res, next) {
         if(req.body.gender) user.gender = req.body.gender;
         if(req.body.retailer1 >= 1) user.retailers.push(req.body.retailer1);
         if(req.body.retailer2 >= 1) user.retailers.push(req.body.retailer2);
-        if(req.body.product) user.products.push(req.body.product);
         user.save(function(err, user) {
           if (err) {
             res.json({error: err})

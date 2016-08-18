@@ -94,7 +94,7 @@ $('.product-item').on('click', '.add-to-closet', function(event){
 	var $product_id = $(event.target).attr("data-id");
 	console.log($product_id);
 		$.ajax({
-			url: '/users/:id',
+			url: '/products/:id',
 			type: "put",
 			dataType: "json",
 			data: {

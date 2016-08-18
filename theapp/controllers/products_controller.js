@@ -21,17 +21,82 @@ function show (req, res, next) {
   });
 }
 
-function update (req, res, next) {
+function get (req, res, next) {
+  User.findById(req.user._id, function(err, user) {
+    // Establish an empty Promises Array
+    var promises = []
+    // Iterate through each product ID in our User model.
+    user.products.forEach(function (product) {
+      var req = rp.get({
+        uri: `http://api.shopstyle.com/api/v2/products/${product}?pid=` + process.env.API_KEY,
+        json: true
+      })
+      // Pushing the API response into our Promises Array
+      promises.push(req)
+    })
 
+    Promise.all(promises)
+            .then(data => {
+              console.log(data);
+              res.json(data);
+    });
+  });
+}
+
+function create (req, res, next) {
+  User.findById(req.user._id, function(err, user) {
+    if (err) {
+      res.json({message: `Could not find user because ${err}`});
+    }
+    else if (!user) {
+      res.json({message: "No user with this id."});
+    }
+    else {
+      if(req.body.product) user.products.push(req.body.product);
+      user.save(function(err, user) {
+        if (err) {
+          res.json({error: err})
+        }
+        else {
+          res.json(user);
+        }
+      });
+    };
+  });
 }
 
 function destroy (req, res, next) {
-
+  User.findById(req.user._id, function(err, user) {
+    if (err) {
+      res.json({message: `Could not find user because ${err}`});
+    }
+    else if (!user) {
+      res.json({message: "No user with this id"});
+    }
+    else {
+      if(req.body.product) {
+        for (var i = 0; i < user.products.length; i++) {
+          if (req.body.product == user.products[i]) {
+            user.products.splice(i, 1)
+          }
+        }
+      }
+      user.save(function(err, user) {
+        if (err) {
+          res.json({error: err})
+        }
+        else {
+          res.json(user);
+        }
+      });
+    };
+  });
 }
 
 module.exports = {
   index:   index,
   show:    show,
-  update:  update,
+  get:     get,
+  create:  create,
   destroy: destroy
 }

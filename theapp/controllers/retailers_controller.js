@@ -2,29 +2,6 @@ var User = require("../models/user");
 var _ = require('underscore')
 var rp = require('request-promise')
 
-function create (req, res, next) {
-  User.findById(req.user._id, function(err, user) {
-    if (err) {
-      res.json({message: `Could not find user because ${err}`});
-    }
-    else if (!user) {
-      res.json({message: "No user with this id"});
-    }
-    else {
-      if(req.body.retailer) user.retailers.push(req.body.retailer);
-      user.save(function(err, user) {
-        if (err) {
-          res.json({error: err})
-        }
-        else {
-          res.json(user);
-        }
-
-      });
-    };
-  });
-}
-
 function get (req, res, next) {
   User.findById(req.user._id, function(err, user) {
     // Establish an empty Promises Array
@@ -62,7 +39,29 @@ function get (req, res, next) {
     });
   });
 }
-//LOOK UP Promise.all
+
+function create (req, res, next) {
+  User.findById(req.user._id, function(err, user) {
+    if (err) {
+      res.json({message: `Could not find user because ${err}`});
+    }
+    else if (!user) {
+      res.json({message: "No user with this id"});
+    }
+    else {
+      if(req.body.retailer) user.retailers.push(req.body.retailer);
+      user.save(function(err, user) {
+        if (err) {
+          res.json({error: err})
+        }
+        else {
+          res.json(user);
+        }
+
+      });
+    };
+  });
+}
 
 function destroy (req, res, next) {
   User.findById(req.user._id, function(err, user) {
@@ -93,7 +92,7 @@ function destroy (req, res, next) {
 }
 
 module.exports = {
-  create:  create,
   get:     get,
+  create:  create,
   destroy: destroy
 }
