@@ -70,7 +70,7 @@ $menu.children('li').each(function(){
 					});
 			}
 	});
-});
+
 // On Page reload - Load products
 $(document).ready(function(){
 	render = _.template($('#product-template').html());
