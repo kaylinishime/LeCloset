@@ -130,24 +130,28 @@ MAIN PRODUCTS GRID
 						<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
 					</div>
 					<div class="info-wrapper">
-						<h6 class ="unbrandedName"><%= name %></h6>
+						<h6 class ="unbrandedName"><%= unbrandedName %></h6>
 						<p class="retailer">Retailer: <%= retailer.name %></p>
 						<p class="price">Price: <%= priceLabel %></p>
 					</div>
 
 					<div class="buttons">
 						<p>
-							<a href="#" class="btn btn-primary remove-from-closet" data-id="<%= id %>"role="button" role="button">Remove From Closet</a>
-							<a href="<%= clickUrl %>" class="btn btn-default" role="button">Buy Now</a>
+							<div class="btn btn-primary remove-from-closet" data-id="<%= id %>">Remove</div>
+							<a href="<%= clickUrl %>" class="btn btn-default" target="_blank">Buy Now</a>
 						</p>
 					</div>
 				</div>
 			</div>
 		</script>
 
-    <div class='uil-ring-css hide' style='transform:scale(0.59);'>
+    <div class='uil-ring-css' style='transform:scale(0.59);'>
 			<div></div>
 		</div>
+    <div id="corbot" class='hide'>
+			<img src="http://cdn.smosh.com/sites/default/files/bloguploads/pokemon-gif-brock-hump.gif" />
+		</div>
+
 
 	</div>
 </div>
