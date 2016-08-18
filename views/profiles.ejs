@@ -124,7 +124,8 @@ MAIN PRODUCTS GRID
 	<div class="col-md-12">
 
 		<script type="text/template" id="profile-template">
-			<div class="thumbnail">
+    <div class="<%= customCategory %>">
+      <div class="thumbnail">
 				<div class="caption">
 					<div class="image-wrapper">
 						<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
@@ -136,13 +137,14 @@ MAIN PRODUCTS GRID
 					</div>
 
 					<div class="buttons">
-						<p>
-							<a href="#" class="btn btn-primary remove-from-closet" data-id="<%= id %>"role="button" role="button">Remove From Closet</a>
+						<p class="center_me">
+							<a href="#" class="btn btn-primary remove-from-closet" data-id="<%= id %>"role="button" role="button">Remove</a>
 							<a href="<%= clickUrl %>" class="btn btn-default" role="button">Buy Now</a>
 						</p>
 					</div>
 				</div>
 			</div>
+    </div>
 		</script>
 
     <div class='uil-ring-css hide' style='transform:scale(0.59);'>
@@ -169,20 +171,20 @@ FILTER FOOTER
     <div class="filter">
       <span class="filter__label">Filter: </span>
       <button class="allbutton">All</button>
-      <button class="jacketbutton">
-        <span class="jackets">Jackets</span>
+      <button class="topbuttom">
+        <span class="jackets">Tops</span>
       </button>
-      <button class="shirtbutton">
-        <span class="action__text">Shirts</span>
+      <button class="bottombutton">
+        <span class="action__text">Bottoms</span>
       </button>
-      <button class="dressbutton">
-        <span class="action__text">Dresses</span>
-      </button>
-      <button class="trouserbutton">
-        <span class="action__text">Trousers</span>
-      </button>
-      <button class="shoebutton">
+      <button class="shoesbutton">
         <span class="action__text">Shoes</span>
+      </button>
+      <button class="accessoriesbutton">
+        <span class="action__text">Accessories</span>
+      </button>
+      <button class="miscbutton">
+        <span class="action__text">Misc</span>
       </button>
     </div>
 

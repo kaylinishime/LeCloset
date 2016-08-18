@@ -1,53 +1,54 @@
 $('.allbutton').click(function() {
   // Show everything
-  $(".catA").show('fast'),
-  $(".catB").show('fast'),
-  $(".catC").show('fast'),
-  $(".catD").show('fast'),
-  $(".catE").show('fast')
+  $(".tops").show('fast'),
+  $(".bottoms").show('fast'),
+  $(".accessories").show('fast'),
+  $(".shoes").show('fast'),
+  $(".misc").show('fast')
 
 })
 
-$('.jacketbutton').click(function() {
+$('.topbutton').click(function() {
   // Double check that everything is visible
-  $(".catA").show('fast'),
-  $(".catB").show('fast'),
-  $(".catC").show('fast'),
-  $(".catD").show('fast'),
-  $(".catE").show('fast')
+  $(".tops").show('fast'),
+  $(".bottoms").show('fast'),
+  $(".accessories").show('fast'),
+  $(".shoes").show('fast'),
+  $(".misc").show('fast')
   // Hide everything exept for Jackets
-  $(".catB").hide('fast'),
-  $(".catC").hide('fast'),
-  $(".catD").hide('fast'),
-  $(".catE").hide('fast')
+  $(".bottoms").hide('fast'),
+  $(".accessories").hide('fast'),
+  $(".shoes").hide('fast'),
+  $(".misc").hide('fast')
 })
 
-$('.shirtbutton').click(function() {
+$('.bottomsbutton').click(function() {
   // Double check that everything is visible
-  $(".catA").show('fast'),
-  $(".catB").show('fast'),
-  $(".catC").show('fast'),
-  $(".catD").show('fast'),
-  $(".catE").show('fast')
+  $(".tops").show('fast'),
+  $(".bottoms").show('fast'),
+  $(".accessories").show('fast'),
+  $(".shoes").show('fast'),
+  $(".misc").show('fast')
   // Hide everything exept for Jackets
-  $(".catA").hide('fast'),
-  $(".catC").hide('fast'),
-  $(".catD").hide('fast'),
-  $(".catE").hide('fast')
+  $(".tops").hide('fast'),
+  $(".accessories").hide('fast'),
+  $(".shoes").hide('fast'),
+  $(".misc").hide('fast')
 })
 
-$('.dressbutton').click(function() {
+$('.shoesbutton').click(function() {
+    console.log('clicked')
   // Double check that everything is visible
-  $(".catA").show('fast'),
-  $(".catB").show('fast'),
-  $(".catC").show('fast'),
-  $(".catD").show('fast'),
-  $(".catE").show('fast')
+  // $(".tops").show('fast'),
+  // $(".bottoms").show('fast'),
+  // $(".accessories").show('fast'),
+  $(".shoes").show('fast'),
+  // $(".misc").show('fast')
   // Hide everything exept for Jackets
-  $(".catA").hide('fast'),
-  $(".catB").hide('fast'),
-  $(".catD").hide('fast'),
-  $(".catE").hide('fast')
+  $(".tops").hide('fast'),
+  $(".bottoms").hide('fast'),
+  $(".accessories").hide('fast'),
+  $(".misc").hide('fast')
 })
 
 $('.trouserbutton').click(function() {
@@ -65,6 +66,7 @@ $('.trouserbutton').click(function() {
 })
 
 $('.shoebutton').click(function() {
+
   // Double check that everything is visible
   $(".catA").show('fast'),
   $(".catB").show('fast'),
