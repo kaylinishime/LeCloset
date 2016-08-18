@@ -1,26 +1,35 @@
 /* Product grid */
 
-
 .product-item {
-	width: 200px;
-	height: 300px;
-	display: inline-block
-
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+	display: block;
 }
 
 .thumbnail {
 display: inline-block;
-position: relative;
 float: left;
+width: 23%;
+margin: 1%;
+height: 470px;
 }
 
 .caption {
 	display: inline-block;
-
+	width: 100%;
 }
 
 .activator {
-	display: inline-block;
-	float: left;
-	position: relative;
+	display: block;
+	max-height: 300px;
+	margin: 0 auto;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.product-name {
+	margin: 10px;
+	height: 50px;
 }

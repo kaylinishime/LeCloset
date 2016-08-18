@@ -27,6 +27,7 @@ router.get('/oauth2callback', passport.authenticate(
 // successRedirect will go to a new path that will contain logic inside of its controller that determines whether or not the user exists.
 // If the user exists they will go to "/close?action=login".
 // If the user does not exist they will go to "/close?action=register"
+// Everything that comes after the '?' can be found using req.query inside of the controller
 // In Main.js line 8:  IF close?action=login THEN redirect to products page
 // In Main.js line 8:  IF close?action=register THEN close window.
 
