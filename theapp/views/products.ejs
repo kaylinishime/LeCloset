@@ -5,12 +5,12 @@
 HEADER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-<header>
-	<$ include ../views/partials/nav.ejs $>
-</header>
 
-<!-- Drop Down Menu -->
-<section id="drop-down">
+<$ include ../views/partials/nav.ejs $>
+
+<header>
+
+	</header>
 	<div class="box">
 		<ul id="ldd_menu" class="ldd_menu">
 			<li>
@@ -43,27 +43,35 @@ HEADER
 			</li>
 		</ul>
 	</div>
-</section>
 
 
 
-
+	<div class="row">
+		<div class="col-md-4">
 <script type="text/template" id="product-template">
-
 	<div class="thumbnail">
 		<div class="caption">
-			<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
-			<p class="product-name"><%= unbrandedName %></p>
-			<p>...</p>
-			<a href="#" class="btn btn-primary" role="button">Button</a>
-			<a href="#" class="btn btn-default" role="button">Button</a>
+			<div class="image-wrapper">
+				<img class="activator" src="<%= image.sizes.Best.url %>" width="280" height="350">
+				<h4 class ="unbrandedName"><%= name %></h4>
+				<p>...</p>
+			</div>
+
+				<div class="buttons">
+				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+			</div>
+
+			</div>
+
 		</div>
-	</div>
+		</div>
+
 
 </script>
-
-
-
-<div class="product-item">
-
 </div>
+</div>
+
+
+
+
+    <div class="product-item"></div>
