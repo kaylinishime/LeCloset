@@ -186,14 +186,11 @@
 .bar {
 	position: fixed;
 	z-index: 100;
-	bottom: 0;
-	left: 0;
 	width: 100%;
-	padding: 2em 5em;
+	padding: .5em 5em;
 	text-align: center;
-	background: rgba(0, 0, 0, 0.8);
+	background: red;
 	-webkit-transform: translate3d(0, 0, 0);
-	/* Fix for Chrome flicker on Mac ...party like we're in 2012! */
 }
 
 .flexbox .filter {

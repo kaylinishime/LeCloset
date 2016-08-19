@@ -49,6 +49,7 @@ img {
 	text-align: center;
 	position: relative;
 	font-weight: bold;
+	z-index: -100;
 }
 
 .info-wrapper {
@@ -70,11 +71,6 @@ img {
 	height: 50px;
 }
 
-.buttons {
-	margin: 0 auto;
-	margin-top: 45px;
-	text-align: center;
-}
 #corbot {
 	margin: 0 auto;
 	display: block;
