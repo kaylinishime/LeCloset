@@ -5,9 +5,7 @@ $('.allbutton').click(function() {
   $(".accessories").show('fast'),
   $(".shoes").show('fast'),
   $(".misc").show('fast')
-
 })
-
 $('.topbutton').click(function() {
   // Double check that everything is visible
   $(".tops").show('fast'),
@@ -21,7 +19,6 @@ $('.topbutton').click(function() {
   $(".shoes").hide('fast'),
   $(".misc").hide('fast')
 })
-
 $('.bottombutton').click(function() {
   // Double check that everything is visible
   $(".tops").show('fast'),
@@ -35,7 +32,6 @@ $('.bottombutton').click(function() {
   $(".shoes").hide('fast'),
   $(".misc").hide('fast')
 })
-
 $('.shoesbutton').click(function() {
     console.log('clicked')
   // Double check that everything is visible
@@ -51,7 +47,6 @@ $('.shoesbutton').click(function() {
   $(".accessories").hide('fast'),
   $(".misc").hide('fast')
 })
-
 $('.accessoriesbutton').click(function() {
   // Double check that everything is visible
   $(".tops").show('fast'),
@@ -65,9 +60,7 @@ $('.accessoriesbutton').click(function() {
   $(".shoes").hide('fast'),
   $(".misc").hide('fast')
 })
-
 $('.miscbutton').click(function() {
-
   // Double check that everything is visible
   $(".tops").show('fast'),
   $(".bottoms").show('fast'),

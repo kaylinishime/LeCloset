@@ -4,8 +4,15 @@ console.log("Main js loaded");
 var googleWindow;
     checkConnect = setInterval(function() {
         if (googleWindow && googleWindow.location.pathname === "/close") {
-        clearInterval(checkConnect);
-        googleWindow.close();
+          if (googleWindow.location.search === "?login") {
+            clearInterval(checkConnect);
+            googleWindow.close();
+            window.location = '/users/:id'
+          }
+          else {
+            clearInterval(checkConnect);
+            googleWindow.close();
+          }
       };
     }, 100);
 

@@ -15,6 +15,24 @@ function home (req, res, next) {
   });
 }
 
+function isloggedin (req, res, next) {
+  User.findById(req.user._id, function(err, user) {
+    if (err) {
+      res.json({message: `Could not find user because ${err}`});
+    }
+    else if (!user) {
+      res.json({message: "No user with this id."});
+    }
+    else if(!req.user.gender) {
+      res.redirect('/close')
+    }
+    else{
+      res.redirect('/close?login')
+    }
+    });
+};
+
+
 function show (req, res, next) {
 var request = rp.get({
       uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY,
@@ -67,6 +85,7 @@ function destroy (req, res, next) {
 
 module.exports = {
   home:     home,
+  isloggedin: isloggedin,
   show:     show,
   close:    close,
   edit:     edit,
