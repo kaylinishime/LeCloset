@@ -7,7 +7,7 @@
 }
 body {
   font-size: 16px;
-  background-color: #eee;
+  background-color: white;
   font: 14px 'Raleway', sans-serif;
   font-weight: 200;
   line-height: 1.4em;
@@ -22,6 +22,10 @@ header {
 select {
   width: 100%;
   font-size: 2em;
+}
+.header_button:hover {
+  border: solid 1px #3482E2;
+	color: #3482E2;
 }
 
 #headerOne {

@@ -1,5 +1,4 @@
 <!-- PROFILE PAGE -->
-
 <!--
 |||||||||||||||||||||||||||||||||||||||||
 HEADER
@@ -9,6 +8,39 @@ HEADER
 <header>
   <$ include ../views/partials/nav.ejs $>
 </header>
+
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+FILTER BAR
+|||||||||||||||||||||||||||||||||||||||||
+-->
+<div class="filter_background">
+  <div class="filter_container">
+    <div class="filter_label_container">
+      <span class="filter_label">Filter: </span>
+    </div>
+    <div class="filter_button_container">
+      <div class="allbutton btn-filter">
+        <span class="filter_text">All</span>
+      </div>
+      <div class="topbutton btn-filter">
+        <span class="filter_text">Tops</span>
+      </div>
+      <div class="bottombutton btn-filter">
+        <span class="filter_text">Bottoms</span>
+      </div>
+      <div class="shoesbutton btn-filter">
+        <span class="filter_text">Shoes</span>
+      </div>
+      <div class="accessoriesbutton btn-filter">
+        <span class="filter_text">Accessories</span>
+      </div>
+      <div class="miscbutton btn-filter">
+        <span class="filter_text">Misc</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--
 |||||||||||||||||||||||||||||||||||||||||
@@ -32,10 +64,10 @@ MAIN PRODUCTS GRID
 						<p class="price">Price: <%= priceLabel %></p>
 					</div>
 
-					<div class="buttons">
+					<div class="product_btn_container">
 						<p>
-							<div class="btn btn-primary remove-from-closet" data-id="<%= id %>">Remove</div>
-							<a href="<%= clickUrl %>" class="btn btn-default" target="_blank">Buy Now</a>
+							<div class="btn product_btn_remove remove-from-closet" data-id="<%= id %>">Remove</div>
+							<a href="<%= clickUrl %>" class="btn product_btn_buy" target="_blank">Buy Now</a>
 						</p>
 					</div>
 				</div>
@@ -60,39 +92,7 @@ MAIN PRODUCTS GRID
 
 <!--
 |||||||||||||||||||||||||||||||||||||||||
-FILTER FOOTER
+FOOTER
 |||||||||||||||||||||||||||||||||||||||||
 -->
-<div class="container">
-  <div class="bar">
-
-    <div class="filter">
-      <span class="filter__label">Filter: </span>
-      <button class="allbutton">
-        <span class="action__text">All</span>
-      </button>
-
-      <button class="topbutton">
-        <span class="action__text">Tops</span>
-      </button>
-      <button class="bottombutton">
-        <span class="action__text">Bottoms</span>
-      </button>
-      <button class="shoesbutton">
-        <span class="action__text">Shoes</span>
-      </button>
-      <button class="accessoriesbutton">
-        <span class="action__text">Accessories</span>
-      </button>
-      <button class="miscbutton">
-        <span class="action__text">Misc</span>
-      </button>
-    </div>
-
-    <button class="cart">
-      <i class="cart__icon fa fa-shopping-cart"></i>
-      <span class="text-hidden">Shopping cart</span>
-      <span class="cart__count">0</span>
-    </button>
-  </div>
-</div>
+<$ include ../views/partials/footer.ejs $>

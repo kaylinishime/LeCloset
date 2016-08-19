@@ -72,10 +72,10 @@ PRODUCT BRICKS
 						<p class="price">Price: <%= priceLabel %></p>
 					</div>
 
-					<div class="buttons">
+					<div class="product_btn_container">
 						<p>
-							<div class="btn btn-primary add-to-closet" data-id="<%= id %>">Add To Closet</div>
-							<a href="<%= clickUrl %>" class="btn btn-default" target="_blank">Buy Now</a>
+							<div class="btn product_btn_add add-to-closet" data-id="<%= id %>">Add To Closet</div>
+							<a href="<%= clickUrl %>" class="btn product_btn_buy" target="_blank">Buy Now</a>
 						</p>
 					</div>
 				</div>
@@ -92,3 +92,10 @@ PRODUCT BRICKS
 <div class="product-item">
 
 </div>
+
+<!--
+|||||||||||||||||||||||||||||||||||||||||
+FOOTER
+|||||||||||||||||||||||||||||||||||||||||
+-->
+<$ include ../views/partials/footer.ejs $>
