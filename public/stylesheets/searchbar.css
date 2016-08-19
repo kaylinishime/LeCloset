@@ -160,12 +160,161 @@ span.reference a:hover{
 	width: 400px;
 }
 
-.action__text {
-margin: 10px 20px;
+/*.action__text {
 padding: 30px;
+font-family: 'Raleway', sans-serif;
+font-weight: 600;
+font-size: 0.8em;
+line-height: 0px !important;
+}*/
+.filter_background {
+	position: fixed;
+	width: 100%;
+	background-color: white;
+	padding-bottom: 20px;
+	z-index: 100;
+}
+.filter_text {
+padding: 30px;
+font-family: 'Raleway', sans-serif;
+font-weight: 600;
+font-size: 0.8em;
 }
 
-.topbutton, .bottombutton, .shoesbutton, .allbutton, .accessoriesbutton, .miscbutton {
-	width: 150px;
-	height: 30px;
+.filter_label {
+	padding-top: 14px;
+	padding-right: 18px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 1em;
+	float: right;
+}
+.filter_container {
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.filter_label_container {
+	width:10%;
+	float: left;
+}
+
+.filter_button_container {
+	width:90%;
+	float: left;
+}
+
+.btn-filter {
+	background-color: #fafafa;
+	margin: 0.6%;
+	width: 15%;
+	border-radius: 2px;
+	border: solid 1px black;
+	display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn-filter:hover {
+	border: solid 1px #3482E2;
+	color: #3482E2;
+}
+
+.product_btn_container {
+	margin: 0 auto;
+	margin-top: 45px;
+	text-align: center;
+}
+
+.product_btn_add {
+	background-color: #fafafa;
+	margin: 0.6%;
+	border-radius: 2px;
+	border: solid 1px black;
+	display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.product_btn_add:hover {
+	border: solid 1px #3482E2;
+	color: #3482E2;
+}
+
+.product_btn_remove {
+	background-color: #fafafa;
+	margin: 0.6%;
+	border-radius: 2px;
+	border: solid 1px black;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.product_btn_remove:hover {
+	border: solid 1px #E23434;
+	color: #E23434;
+}
+
+.product_btn_buy {
+	background-color: #fafafa;
+	margin: 0.6%;
+	border-radius: 2px;
+	border: solid 1px black;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.product_btn_buy:hover {
+	border: solid 1px #39B45B;
+	color: #39B45B;
 }
