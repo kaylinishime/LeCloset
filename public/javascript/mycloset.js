@@ -16,10 +16,6 @@ $(document).ready(function(){
 	});
 });
 
-
-
-
-
 // Removing a product from my closet
 $('.product-item').on('click', '.remove-from-closet', function(event){
 	console.log('clicked');

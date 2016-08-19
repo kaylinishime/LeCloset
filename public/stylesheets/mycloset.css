@@ -42,7 +42,11 @@ img {
 	height: 280px;
 	position: inherit;
 }
-
+.homepage_image {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
 .unbrandedName {
 	font-size: 14px;
 	margin-top: 30px;
