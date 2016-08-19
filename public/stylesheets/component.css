@@ -189,9 +189,9 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	padding: 1.75em 5em;
+	padding: 2em 5em;
 	text-align: center;
-	background: #191a1b;
+	background: rgba(0, 0, 0, 0.8);
 	-webkit-transform: translate3d(0, 0, 0);
 	/* Fix for Chrome flicker on Mac ...party like we're in 2012! */
 }
