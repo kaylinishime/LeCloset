@@ -313,3 +313,19 @@ section {
 #middle {
   text-align: right;
 }
+
+#titleone,
+#titletwo,
+#titlethree {
+  margin-top: 20px;
+}
+
+.block_one {
+  margin-top: 30px;
+}
+.block_two {
+  margin-top: 170px;
+}
+.block_three {
+  margin-top: 60px;
+}
