@@ -66,7 +66,7 @@ $('.accessoriesbutton').click(function() {
   $(".misc").hide('fast')
 })
 
-$('.misc').click(function() {
+$('.miscbutton').click(function() {
 
   // Double check that everything is visible
   $(".tops").show('fast'),

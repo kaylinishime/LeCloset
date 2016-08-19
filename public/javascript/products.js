@@ -1,7 +1,7 @@
 // THE MENU
 var $menu = $('#ldd_menu');
+// custom dictionary to reducing clothing types to 5 categories
 var customCategory;
-
 var categoryConversions = {
 	"Sneakers":"shoes",
 	"Flats":"shoes",
@@ -41,7 +41,41 @@ var categoryConversions = {
 	"Cardigans":"tops",
 	"Bridal Gowns":"tops",
 	"Cream Foundation": "misc",
-	"Cropped Denim":"tops"
+	"Cropped Denim":"tops",
+	"Cocktail Dresses": "tops",
+	"Skinny Denim": "bottoms",
+	"Mules & Clogs": "shoes",
+	"Teen Girls' Tops": "tops",
+	"Cashmere Sweaters":"tops",
+	"Shoulder Bags":"accessories",
+	"Tanks":"tops",
+	"Coats":"tops",
+	"Backpacks":"accessories",
+	"Clutches":"accessories",
+	"Eyebrow Enhancers":"misc",
+	"Eye Shadow":"misc",
+	"Outerwear":"tops",
+	"Mascara":"misc",
+	"Lipstick":"misc",
+	"Dark Circles":"misc",
+	"Blow Dryers & Irons":"misc",
+	"Nail Polish":"misc",
+	"Makeup":"misc",
+	"Beauty Products":"misc",
+	"Wedges":"Shoes",
+	"Distressed Denim":"bottoms",
+	"Face Skin Revitalizers":"misc",
+	"Necklaces":"accessories",
+	"Bracelets":"accessories",
+	"Face Blush":"misc",
+	"Teen Girls' Clothes":"misc",
+	"Bags":"accessories",
+	"Heels":"shoes",
+	"Rings":"accessories",
+	"Face Bronzer":"misc",
+	"Bridal Shoes":"shoes",
+	"Pumps":"shoes",
+	"Platforms":"shoes"
 }
 //  for each list element, we show the submenu when hovering and expand the span element (title) to 510px
 
