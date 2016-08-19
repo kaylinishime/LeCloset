@@ -297,3 +297,19 @@ section {
   display: block;
   margin-bottom: 10px;
 }
+
+#titleone {
+  text-align: left;
+}
+
+#titletwo {
+  text-align: right;
+}
+
+#titlethree {
+  text-align: left;
+}
+
+#middle {
+  text-align: right;
+}
