@@ -8,6 +8,7 @@ $(document).ready(function(){
 			} else {
 				console.log(product);
 				product.forEach(function(products) {
+					products.customCategory = categoryConversions[products.categories[0].name]
 					$('.product-item').append(render(products))
 					$('.uil-ring-css').addClass('hide')
 				});

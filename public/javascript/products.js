@@ -1,5 +1,82 @@
 // THE MENU
 var $menu = $('#ldd_menu');
+// custom dictionary to reducing clothing types to 5 categories
+var customCategory;
+var categoryConversions = {
+	"Sneakers":"shoes",
+	"Flats":"shoes",
+	"Watches":"accessories",
+	"Hats":"accessories",
+	"Sandals":"shoes",
+	"Leather Jackets":"tops",
+	"Clothing":"misc",
+	"Hair Styling Products": "misc",
+	"Hair Care":"misc",
+	"Tees":"tops",
+	"Jeans": "bottoms",
+	"Sunglasses": "accessories",
+	"Lace-up Shoes": "shoes",
+	"Jewelry": "accessories",
+	"Slip-ons & Loafers":"shoes",
+	"Shirts": "tops",
+	"Slim Jeans":"bottoms",
+	"Fragrances":"misc",
+	"Athletic Shoes":"shoes",
+	"Dresses":"tops",
+	"Day Dresses":"tops",
+	"Shorts":"bottoms",
+	"Face Makeup":"misc",
+	"Face Moisturizers":"misc",
+	"Evening Dresses":"tops",
+	"Face Anti-Aging":"misc",
+	"Duffels & Totes":"accessories",
+	"Styling Products":"misc",
+	"Diamond Necklaces":"accessories",
+	"Coats":"tops",
+	"Pumps":"shoes",
+	"Skin Care":"misc",
+	"Longsleeve Tops":"tops",
+	"Casual Jackets":"tops",
+	"Boots":"shoes",
+	"Cardigans":"tops",
+	"Bridal Gowns":"tops",
+	"Cream Foundation": "misc",
+	"Cropped Denim":"tops",
+	"Cocktail Dresses": "tops",
+	"Skinny Denim": "bottoms",
+	"Mules & Clogs": "shoes",
+	"Teen Girls' Tops": "tops",
+	"Cashmere Sweaters":"tops",
+	"Shoulder Bags":"accessories",
+	"Tanks":"tops",
+	"Coats":"tops",
+	"Backpacks":"accessories",
+	"Clutches":"accessories",
+	"Eyebrow Enhancers":"misc",
+	"Eye Shadow":"misc",
+	"Outerwear":"tops",
+	"Mascara":"misc",
+	"Lipstick":"misc",
+	"Dark Circles":"misc",
+	"Blow Dryers & Irons":"misc",
+	"Nail Polish":"misc",
+	"Makeup":"misc",
+	"Beauty Products":"misc",
+	"Wedges":"Shoes",
+	"Distressed Denim":"bottoms",
+	"Face Skin Revitalizers":"misc",
+	"Necklaces":"accessories",
+	"Bracelets":"accessories",
+	"Face Blush":"misc",
+	"Teen Girls' Clothes":"misc",
+	"Bags":"accessories",
+	"Heels":"shoes",
+	"Rings":"accessories",
+	"Face Bronzer":"misc",
+	"Bridal Shoes":"shoes",
+	"Pumps":"shoes",
+	"Platforms":"shoes"
+}
 //  for each list element, we show the submenu when hovering and expand the span element (title) to 510px
 
 $menu.children('li').each(function(){
@@ -29,12 +106,28 @@ $menu.children('li').each(function(){
 								$('.product-item').show();
 								$('.uil-ring-css').addClass('hide')
 								product.forEach(function(products) {
+									// add field products.customCategory
+									// populate customCategory with categoryConvert function
+									products.customCategory = categoryConversions[products.categories[0].name]
 									$('.product-item').append(render(products))
 								});
 							}
 					});
 			});
 });
+
+// takes in a sophisticated category and returns
+// a dumbed down category
+
+
+// 5 categories
+
+// 1. shoes
+// 2. tops
+// 3.	bottoms
+// 4. accessories
+// 5. misc
+
 
 	$('.cbox1').click(function(event){
 		// Checks to see if the box is checked.

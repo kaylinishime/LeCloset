@@ -159,3 +159,13 @@ span.reference a:hover{
 .col-md-4 {
 	width: 400px;
 }
+
+.action__text {
+margin: 10px 20px;
+padding: 30px;
+}
+
+.topbutton, .bottombutton, .shoesbutton, .allbutton, .accessoriesbutton, .miscbutton {
+	width: 150px;
+	height: 30px;
+}
