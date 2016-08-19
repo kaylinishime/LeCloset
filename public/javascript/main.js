@@ -69,19 +69,6 @@ $('#lets_do_this1').on('click', function() {
         retailer2: $retailer2
       }
     })
-      // .then(function(data) {
-      //   if (data.error) {
-      //     $("#errors").html(`Error: ${data.error}`);
-      //   }
-      //   else {
-      //     $("#errors").html('');
-      //     $("#additional-information").hide();
-      //     $("#update-button").show();
-      //     if (data.shelter) $("#shelter-button").show();
-      //     else $("#shelter-button").hide();
-      //   }
-      // })
-    console.log('it works');
     window.location.href="/products/:id"
   }
   else {
@@ -107,20 +94,6 @@ $('#lets_do_this2').on('click', function() {
         retailer2: $retailer4
       }
     })
-    // .then(function(data) {
-    //   if (data.error) {
-    //     $("#errors").html(`Error: ${data.error}`);
-    //   }
-    //   else {
-    //     $("#errors").html('');
-    //     $("#additional-information").hide();
-    //     $("#update-button").show();
-    //     if (data.shelter) $("#shelter-button").show();
-    //     else $("#shelter-button").hide();
-    //   }
-    // })
-    console.log('it works');
-
     window.location.href="/products/:id"
 
   }
