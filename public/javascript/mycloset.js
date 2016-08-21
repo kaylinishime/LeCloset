@@ -40,7 +40,7 @@ $('.product-item').on('click', '.remove-from-closet', function(event){
             if (product.length <= 0){
               console.log('ALL DONE');
               $('.uil-ring-css').addClass('hide')
-              $('#corbot').removeClass('hide')
+              // $('#corbot').removeClass('hide')
             }
             else {
               if(product.error){
