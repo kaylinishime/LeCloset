@@ -3,6 +3,7 @@ $(document).ready(function(){
 	render = _.template($('#profile-template').html());
 	$.get('/products/:id/get', function(product) {
 			console.log(product)
+			console.log(user.user._id);
 			if(product.error){
 				console.log(product.error)
 			} else {
