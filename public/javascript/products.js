@@ -94,15 +94,12 @@ $menu.children('li').each(function(){
 			$('.product-item').html("")
 			// make template
 			render = _.template($('#product-template').html());
-			console.log('mouseleave');
 
 				$('.uil-ring-css').removeClass('hide')
 				$.get('/retailers', function(product) {
-						console.log(product)
 						if(product.error){
 							console.log(product.error)
 						} else {
-								console.log(product);
 								$('.product-item').show();
 								$('.uil-ring-css').addClass('hide')
 								product.forEach(function(products) {
@@ -119,24 +116,12 @@ $menu.children('li').each(function(){
 // takes in a sophisticated category and returns
 // a dumbed down category
 
-
-// 5 categories
-
-// 1. shoes
-// 2. tops
-// 3.	bottoms
-// 4. accessories
-// 5. misc
-
-
 	$('.cbox1').click(function(event){
 		// Checks to see if the box is checked.
 		// IF yes THEN add the retailer ID to the DB under user.retailers
 		if($(event.target).is(':checked')) {
 			var $label = $(event.target).next('label').text();
 			var $retailer_id = $(event.target).next('label').attr("data-id");
-			console.log($label)
-			console.log($retailer_id);
 				$.ajax({
 					url: '/retailers',
 					type: "put",
@@ -150,8 +135,6 @@ $menu.children('li').each(function(){
 				// IF no THEN remove the retailer ID from the DB under user.retailers
 				var $label = $(event.target).next('label').text();
 				var $retailer_id = $(event.target).next('label').attr("data-id");
-				console.log($label)
-				console.log($retailer_id);
 					$.ajax({
 						url: '/retailers',
 						type: "delete",
@@ -171,7 +154,6 @@ $(document).ready(function(){
 			if(product.error){
 				console.log(product.error)
 			} else {
-				console.log(product);
 				product.forEach(function(products) {
 					$('.product-item').append(render(products))
 					$('.uil-ring-css').addClass('hide')
@@ -182,10 +164,8 @@ $(document).ready(function(){
 
 // Adding a product to my closet
 $('.product-item').on('click', '.add-to-closet', function(event){
-	console.log('clicked');
 	// Grabs the product ID out of the button
 	var $product_id = $(event.target).attr("data-id");
-	console.log($product_id);
 		$.ajax({
 			url: '/products/:id',
 			type: "put",
