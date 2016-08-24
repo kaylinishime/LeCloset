@@ -73,7 +73,6 @@ $('#lets_do_this1').on('click', function() {
   }
   else {
     // show error to the user
-    console.log('its broken');
   }
 })
 
@@ -99,6 +98,5 @@ $('#lets_do_this2').on('click', function() {
   }
   else {
     // show error to the user
-    console.log('its broken');
   }
 })
