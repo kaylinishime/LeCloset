@@ -150,7 +150,6 @@ $menu.children('li').each(function(){
 $(document).ready(function(){
 	render = _.template($('#product-template').html());
 	$.get('/retailers', function(product) {
-			console.log(product)
 			if(product.error){
 				console.log(product.error)
 			} else {

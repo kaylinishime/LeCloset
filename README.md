@@ -5,7 +5,7 @@
 This web app was designed to help aggregate a consumers favorite clothes from over 200 of their favorite retailers.  Using a custom API and filter features we were able to show the end user outfits that they were likely to purchase within a 1 week sprint.
 
 ##Technologies
-<img style="width:700px;display:block;margin:0 auto;" src="http://i1308.photobucket.com/albums/s612/williampruden/proj3_zpsez7vkmvh.jpg">
+<img src="http://i1308.photobucket.com/albums/s612/williampruden/proj3_zpsez7vkmvh.jpg">
 
 | Technologies  | APIs   	| Deployment  |
 | ------------- |:-------	| -----------|

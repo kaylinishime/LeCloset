@@ -29,7 +29,7 @@ select {
 }
 
 #headerOne {
-    background: url('../images/header.jpg') no-repeat top center fixed;
+    background: url('../images/header1.jpg') no-repeat top center fixed;
     margin-top: 100px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -157,7 +157,8 @@ section {
 }
 
 .founder_image {
-  width: 80%;
+  min-width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   display: block;
   border-radius: 100%;
@@ -300,14 +301,17 @@ section {
 
 #titleone {
   text-align: left;
+  margin-left: 0;
 }
 
 #titletwo {
   text-align: right;
+  margin-right: 26px;
 }
 
 #titlethree {
   text-align: left;
+  margin-left: 0;
 }
 
 #middle {
