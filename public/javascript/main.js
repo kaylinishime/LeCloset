@@ -1,5 +1,3 @@
-console.log("Main js loaded");
-
 // Checks to see when the triple handshake has been completed and auto closes the window once its complete.
 var googleWindow;
     checkConnect = setInterval(function() {
@@ -8,6 +6,7 @@ var googleWindow;
             clearInterval(checkConnect);
             googleWindow.close();
             window.location = '/users/:id'
+            // window.location = `/users/${req.user._id}`
           }
           else {
             clearInterval(checkConnect);
