@@ -32,9 +32,8 @@ function isloggedin (req, res, next) {
     });
 };
 
-
 function show (req, res, next) {
-var request = rp.get({
+  var request = rp.get({
       uri: "http://api.shopstyle.com/api/v2/products?pid=" + process.env.API_KEY,
       json: true
   })
@@ -49,10 +48,6 @@ var request = rp.get({
 
 function close (req, res, next) {
   res.render('close');
-}
-
-function edit (req, res, next) {
-
 }
 
 function update(req, res, next) {
@@ -88,7 +83,6 @@ module.exports = {
   isloggedin: isloggedin,
   show:     show,
   close:    close,
-  edit:     edit,
   update:   update,
   destroy:  destroy,
 }
