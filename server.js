@@ -8,7 +8,7 @@ var session = require('express-session');
 var passport = require('passport');
 var debug = require('debug')('app:http');
 var _ = require('underscore');
-require('newrelic');
+
 
 // load the env vars
 require('dotenv').load();
