@@ -37,14 +37,12 @@ router.get('/close', usersController.close);
 // eventually needs authController.verify
 router.get('/', usersController.home);
 router.get('/isloggedin', usersController.isloggedin);
-router.get('/users/:id', usersController.show);
-router.get('/users/:id', usersController.edit);
+router.get('/profile', usersController.show);
 router.put('/users/:id', usersController.update);
 router.delete('/users/:id', usersController.destroy);
 
 // PRODUCT routes
-router.get('/products/', productsController.index);
-router.get('/products/:id', productsController.show);
+router.get('/products', productsController.show);
 router.get('/products/:id/get', productsController.get);
 router.put('/products/:id', productsController.create);
 router.delete('/products/:id', productsController.destroy);

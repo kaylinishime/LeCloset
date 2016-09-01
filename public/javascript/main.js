@@ -5,7 +5,7 @@ var googleWindow;
           if (googleWindow.location.search === "?login") {
             clearInterval(checkConnect);
             googleWindow.close();
-            window.location = '/users/:id'
+            window.location = '/profile'
             // window.location = `/users/${req.user._id}`
           }
           else {
@@ -27,7 +27,7 @@ $("#register").on("click", function (){
 
 // My Closet Button
 $("#my_closet").on("click", function (){
-  window.location.href="/users/:id"
+  window.location.href="/profile"
 })
 
 // Log Out Button
@@ -68,7 +68,7 @@ $('#lets_do_this1').on('click', function() {
         retailer2: $retailer2
       }
     })
-    window.location.href="/products/:id"
+    window.location.href="/products"
   }
   else {
     // show error to the user
@@ -92,7 +92,7 @@ $('#lets_do_this2').on('click', function() {
         retailer2: $retailer4
       }
     })
-    window.location.href="/products/:id"
+    window.location.href="/products"
 
   }
   else {

@@ -2,11 +2,6 @@ var User = require("../models/user");
 var rp = require("request-promise");
 var _ = require('underscore');
 
-function index (req, res, next) {
-res.render('products', { user: req.user });
-
-}
-
 function show (req, res, next) {
   console.log(req.user);
   var request = rp.get({
@@ -37,7 +32,6 @@ function get (req, res, next) {
 
     Promise.all(promises)
             .then(data => {
-              console.log(data);
               res.json(data);
     });
   });
@@ -94,7 +88,6 @@ function destroy (req, res, next) {
 }
 
 module.exports = {
-  index:   index,
   show:    show,
   get:     get,
   create:  create,
