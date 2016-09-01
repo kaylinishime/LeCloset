@@ -34,7 +34,6 @@ function get (req, res, next) {
               })
               var flatJson = _.flatten(mappedJson)
               var finalJson = _.shuffle(flatJson)
-              console.log(finalJson);
               res.json(finalJson);
     });
   });
