@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <img src="https://preview.ibb.co/gi2H3b/le_closet_logo.png" alt="le_closet_logo" border="0">
+=======
+<img src="http://i1308.photobucket.com/albums/s612/williampruden/le_closet_logo_readme_zpsxepitrlk.png">
+Website: https://fierce-river-25388.herokuapp.com/
+>>>>>>> bd9fa4fecc2388af4d457c231d78cf6e4fe1f397
 
 #Le Closet
 
