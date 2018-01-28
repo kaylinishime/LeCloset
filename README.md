@@ -1,4 +1,4 @@
-<img src="http://i1308.photobucket.com/albums/s612/williampruden/le_closet_logo_readme_zpsxepitrlk.png">
+<img src="https://preview.ibb.co/gi2H3b/le_closet_logo.png" alt="le_closet_logo" border="0">
 
 #Le Closet
 
