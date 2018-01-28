@@ -3,7 +3,7 @@
 
 
 # Le Closet
-https://fierce-river-25388.herokuapp.com/
+https://fierce-river-25388.herokuapp.com/ <br/>
 This web app was designed to help aggregate a consumers favorite clothes from over 200 of their favorite retailers.  Using a custom API and filter features we were able to show the end user outfits that they were likely to purchase within a 1 week sprint.
 
 ## Technologies
