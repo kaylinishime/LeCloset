@@ -2,11 +2,11 @@
 <img src="https://preview.ibb.co/gi2H3b/le_closet_logo.png" alt="le_closet_logo" border="0">
 
 
-#Le Closet
+# Le Closet
 
 This web app was designed to help aggregate a consumers favorite clothes from over 200 of their favorite retailers.  Using a custom API and filter features we were able to show the end user outfits that they were likely to purchase within a 1 week sprint.
 
-##Technologies
+## Technologies
 <!-- <img src="http://i1308.photobucket.com/albums/s612/williampruden/proj3_zpsez7vkmvh.jpg"> -->
 
 | Technologies  | APIs   	| Deployment  |
@@ -22,7 +22,7 @@ This web app was designed to help aggregate a consumers favorite clothes from ov
 | CSS 3 		|      			|    	   	 |
 
 
-##User Model
+## User Model
 
 | Parameters  | Value   	| Description  | Example |
 | ----------- | ----------	| ------------ | ------- |
@@ -35,19 +35,19 @@ This web app was designed to help aggregate a consumers favorite clothes from ov
 | googleId 	| Number     	| ID' provided by Google's oAuth | 105460793152116688442 |
 | CreatedAt 	| Date     	| Date the profile was created | 2016-08-14T22:48:15.387Z |
 
-##Planning and Approach
+## Planning and Approach
 Tasks were delegated and roles were identified as a mutual team decision. The plan consisted of building the core backend framework and functions using the ShopStyle API and then construct a robust, UX minded Front End. ​
 
-####Team Roles
+#### Team Roles
 - Project Manager / Backend Developer - Kayli Nishime
 - Backend Developer - Billy Pruden
 - API/Research/Filter Functions - Chris Lopez
 
-####Wireframes - Using Sketch
+#### Wireframes - Using Sketch
 
 <!-- <img style="width:700px;display:block;margin:0 auto;" src="http://i1308.photobucket.com/albums/s612/williampruden/Screen%20Shot%202016-08-23%20at%207.05.54%20PM_zpsfuy5mx4l.png"> -->
 
-####Challenges
+#### Challenges
 
 - Using an unfamiliar Oauth
 - Using an unfamiliar API
