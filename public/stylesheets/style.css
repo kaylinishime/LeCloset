@@ -334,7 +334,7 @@ section {
   margin-top: 60px;
 }
 
-@media(max-width: 768px){
+@media screen and (max-width: 768px){
   #headerOne {
     background: url(../images/header1.jpg) no-repeat;
     margin-top: 100px;
